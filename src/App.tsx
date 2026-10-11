@@ -223,7 +223,7 @@ function HomePage() {
     { name: 'Blue Sable', tone: 'sable', note: 'Inky blues / velvet / cool shadow', image: images.blueSable, link: '/spaces/living-rooms' },
     { name: 'Vesper Red', tone: 'vesper', note: 'Red velvet / black accents / rich contrast', image: images.vesperRed, link: '/spaces/living-rooms' },
     { name: 'Sterling Green', tone: 'sterling', note: 'Deep green / architectural detail / soft light', image: images.sterlingGreen, link: '/spaces/bedrooms' },
-    { name: 'Noir Elegance', tone: 'noir', note: 'Black & ivory / ornate detail / candlelit', image: images.noirElegance, link: '/spaces/living-rooms' },
+    { name: 'Noir Elegance', tone: 'noir', note: 'Black & ivory / ornate detail / candlelit', image: '/57-noir-bedroom-wings-v2.jpg', link: '#noir-elegance-gallery' },
     { name: 'Duskworn', tone: 'duskworn', note: 'Smoky patina / storm shades / aged surfaces', image: images.duskworn, link: '/spaces/entryways' },
   ];
   return (
@@ -261,6 +261,16 @@ function HomePage() {
               </div>
             </Link>
           ))}
+        </div>
+        <div id="noir-elegance-gallery" className="noir-gallery" style={{marginTop:'3rem',scrollMarginTop:'6rem'}}>
+          <div className="section-heading"><div className="section-index">04 / NOIR ELEGANCE</div><div><h2>NOIR ELEGANCE.</h2><p>Dark architectural detail, refined silhouettes, and quiet drama.</p></div></div>
+          <div className="space-grid large">
+            {[
+              {src:'/57-noir-bedroom-wings-v2.jpg',alt:'Noir elegance bedroom with wing-inspired detailing'},
+              {src:'/58-noir-console-raven.jpg',alt:'Noir elegance console vignette with raven detailing'},
+              {src:'/61-noir-chaise-corner-filigree.jpg',alt:'Noir elegance chaise corner with delicate filigree'}
+            ].map((photo)=><div className="space-card" key={photo.src}><ImageFrame src={photo.src} alt={photo.alt}/></div>)}
+          </div>
         </div>
         <p className="collections-disclaimer">Color collections are editorial inspiration; room pages feature practical ideas and relevant finds, not claimed exact product matches.</p>
       </section>

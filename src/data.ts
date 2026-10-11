@@ -1,8 +1,8 @@
 export const site = {
   name: 'Afterdark Dwellings',
   email: 'afterdarkdwellings@gmail.com',
-  pinterest: 'https://www.pinterest.com/afterdarkdwellings/',
-  temporaryBaseUrl: 'https://afterdarkdwellings.jo3.org/',
+  pinterest: 'https://www.pinterest.com/afterdarkdwellings_/',
+  temporaryBaseUrl: 'https://afterdarkdwellings.us/',
 };
 
 export const images = {
@@ -350,7 +350,7 @@ export const spaces: Space[] = [
     imageAlt: 'Dark editorial living room with layered black materials and warm architectural lighting.',
     guideSlugs: ['dark-living-room-feel-expensive', '7-ways-to-make-a-dark-room-feel-expensive', 'layered-lighting-for-dark-interiors', 'black-and-stone-interiors'],
     productCategories: ['Lighting', 'Furniture', 'Objects', 'Mirrors'],
-    pinterestBoard: 'https://www.pinterest.com/afterdarkdwellings/dark-living-rooms/',
+    pinterestBoard: 'https://www.pinterest.com/afterdarkdwellings_/dark-living-rooms/',
   },
   {
     slug: 'bedrooms',
@@ -361,7 +361,7 @@ export const spaces: Space[] = [
     imageAlt: 'Dark layered interior with black and charcoal tones and warm low lighting.',
     guideSlugs: ['dark-bedroom-without-feeling-heavy', 'layered-lighting-for-dark-interiors'],
     productCategories: ['Lighting', 'Furniture', 'Textiles', 'Mirrors'],
-    pinterestBoard: 'https://www.pinterest.com/afterdarkdwellings/dark-bedrooms/',
+    pinterestBoard: 'https://www.pinterest.com/afterdarkdwellings_/dark-bedrooms/',
   },
   {
     slug: 'kitchens',
@@ -372,7 +372,7 @@ export const spaces: Space[] = [
     imageAlt: 'Black and stone interior with dark surfaces and warm architectural lighting.',
     guideSlugs: ['black-kitchen-without-feeling-flat', 'black-and-stone-interiors', 'layered-lighting-for-dark-interiors'],
     productCategories: ['Lighting', 'Kitchen', 'Storage', 'Objects'],
-    pinterestBoard: 'https://www.pinterest.com/afterdarkdwellings/dark-kitchens/',
+    pinterestBoard: 'https://www.pinterest.com/afterdarkdwellings_/dark-kitchens/',
   },
   {
     slug: 'bathrooms',
@@ -383,7 +383,7 @@ export const spaces: Space[] = [
     imageAlt: 'Dark bathroom with black stone, mirror lighting and refined metal details.',
     guideSlugs: ['dark-bathroom-that-feels-expensive', 'layered-lighting-for-dark-interiors', 'black-and-stone-interiors'],
     productCategories: ['Lighting', 'Mirrors', 'Bath', 'Objects'],
-    pinterestBoard: 'https://www.pinterest.com/afterdarkdwellings/dark-bathrooms/',
+    pinterestBoard: 'https://www.pinterest.com/afterdarkdwellings_/dark-bathrooms/',
   },
   {
     slug: 'home-offices',
@@ -394,7 +394,7 @@ export const spaces: Space[] = [
     imageAlt: 'Dark home office with black wood and focused task lighting.',
     guideSlugs: ['dark-home-office-without-feeling-closed-in', 'layered-lighting-for-dark-interiors'],
     productCategories: ['Lighting', 'Furniture', 'Storage'],
-    pinterestBoard: 'https://www.pinterest.com/afterdarkdwellings/dark-home-offices/',
+    pinterestBoard: 'https://www.pinterest.com/afterdarkdwellings_/dark-home-offices/',
   },
   {
     slug: 'entryways',
@@ -405,7 +405,7 @@ export const spaces: Space[] = [
     imageAlt: 'Dark entryway with warm wall light, black stone and a clear sightline.',
     guideSlugs: ['dark-entryway-lighting-mirrors-contrast', 'layered-lighting-for-dark-interiors'],
     productCategories: ['Lighting', 'Mirrors', 'Furniture', 'Objects'],
-    pinterestBoard: 'https://www.pinterest.com/afterdarkdwellings/dark-entryways/',
+    pinterestBoard: 'https://www.pinterest.com/afterdarkdwellings_/dark-entryways/',
   },
   {
     slug: 'small-spaces',
@@ -416,22 +416,22 @@ export const spaces: Space[] = [
     imageAlt: 'Small dark room with open sightlines and warm architectural lighting.',
     guideSlugs: ['small-dark-spaces-that-still-feel-open', 'layered-lighting-for-dark-interiors'],
     productCategories: ['Lighting', 'Mirrors', 'Storage', 'Furniture'],
-    pinterestBoard: 'https://www.pinterest.com/afterdarkdwellings/small-dark-spaces/',
+    pinterestBoard: 'https://www.pinterest.com/afterdarkdwellings_/small-dark-spaces/',
   },
 ];
 
 export const spaceBySlug = Object.fromEntries(spaces.map((space) => [space.slug, space]));
 
 export const pinterestBoards = [
-  ['Dark Interior Ideas', 'https://www.pinterest.com/afterdarkdwellings/dark-interior-ideas/'],
-  ['Dark Living Rooms', 'https://www.pinterest.com/afterdarkdwellings/dark-living-rooms/'],
-  ['Dark Bedrooms', 'https://www.pinterest.com/afterdarkdwellings/dark-bedrooms/'],
-  ['Dark Kitchens', 'https://www.pinterest.com/afterdarkdwellings/dark-kitchens/'],
-  ['Dark Bathrooms', 'https://www.pinterest.com/afterdarkdwellings/dark-bathrooms/'],
-  ['Dark Home Offices', 'https://www.pinterest.com/afterdarkdwellings/dark-home-offices/'],
-  ['Lighting After Dark', 'https://www.pinterest.com/afterdarkdwellings/lighting-after-dark/'],
-  ['Black & Stone Interiors', 'https://www.pinterest.com/afterdarkdwellings/black-stone-interiors/'],
-  ['Dark Entryways', 'https://www.pinterest.com/afterdarkdwellings/dark-entryways/'],
-  ['Small Dark Spaces', 'https://www.pinterest.com/afterdarkdwellings/small-dark-spaces/'],
-  ['Curated Home Finds', 'https://www.pinterest.com/afterdarkdwellings/curated-home-finds/'],
+  ['Dark Interior Ideas', 'https://www.pinterest.com/afterdarkdwellings_/dark-interior-ideas/'],
+  ['Dark Living Rooms', 'https://www.pinterest.com/afterdarkdwellings_/dark-living-rooms/'],
+  ['Dark Bedrooms', 'https://www.pinterest.com/afterdarkdwellings_/dark-bedrooms/'],
+  ['Dark Kitchens', 'https://www.pinterest.com/afterdarkdwellings_/dark-kitchens/'],
+  ['Dark Bathrooms', 'https://www.pinterest.com/afterdarkdwellings_/dark-bathrooms/'],
+  ['Dark Home Offices', 'https://www.pinterest.com/afterdarkdwellings_/dark-home-offices/'],
+  ['Lighting After Dark', 'https://www.pinterest.com/afterdarkdwellings_/lighting-after-dark/'],
+  ['Black & Stone Interiors', 'https://www.pinterest.com/afterdarkdwellings_/black-stone-interiors/'],
+  ['Dark Entryways', 'https://www.pinterest.com/afterdarkdwellings_/dark-entryways/'],
+  ['Small Dark Spaces', 'https://www.pinterest.com/afterdarkdwellings_/small-dark-spaces/'],
+  ['Curated Home Finds', 'https://www.pinterest.com/afterdarkdwellings_/curated-home-finds/'],
 ] as const;

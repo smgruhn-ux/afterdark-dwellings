@@ -1667,3 +1667,10 @@ body{background:linear-gradient(145deg,#080d19 0%,#06070b 40%,#0b0b11 100%)}
 .noir-scene-links a{display:inline-block;width:fit-content;text-decoration:underline;text-underline-offset:5px}
 .noir-collection-note{font-size:.83rem;opacity:.75;max-width:710px;line-height:1.7;margin-top:3rem}
 @media(max-width:760px){.noir-scene{grid-template-columns:1fr}.noir-scene>img{max-height:none}.noir-scene-copy{padding-bottom:.5rem}}
+
+/* Palette collection galleries */
+.palette-photo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(16px, 3vw, 36px); margin-top: 32px; }
+.palette-photo { margin: 0; min-width: 0; }
+.palette-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; border-radius: 3px; }
+.palette-photo figcaption { padding: 12px 0 4px; font-size: 0.76rem; letter-spacing: 0.09em; text-transform: uppercase; opacity: 0.78; }
+@media (max-width: 620px) { .palette-photo-grid { grid-template-columns: 1fr; } }

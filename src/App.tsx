@@ -161,6 +161,20 @@ function SectionTitle({ index, title, copy }: { index: string; title: string; co
   );
 }
 
+
+const imageFallbacks: Record<string, string> = {
+  '/afterdark-images/blue-sable.webp': 'https://img.tailwindapp.net/images/cae9/c356/7631/708a0d852433de724063.png',
+  '/afterdark-images/dark-bathrooms.webp': 'https://img.tailwindapp.net/images/c662/ea9f/c1b1/e3bb9198d75259925f41.png',
+  '/afterdark-images/duskworn.webp': 'https://img.tailwindapp.net/images/21ab/7418/1f87/41a53b6c9d7cb992d231.png',
+  '/afterdark-images/blue-sable-alt.webp': 'https://img.tailwindapp.net/images/c687/cfb1/3488/8c0ee7e6c1a024dede23.png',
+  '/afterdark-images/noir-elegance.webp': 'https://img.tailwindapp.net/images/5564/21e9/a19a/f0be8a5ef8901e494cd6.png',
+  '/afterdark-images/dark-entryways.webp': 'https://img.tailwindapp.net/images/d276/0d96/2e2e/ec535ba2569cf4f48006.png',
+  '/afterdark-images/vesper-red.webp': 'https://img.tailwindapp.net/images/cae9/c356/7631/708a0d852433de724063.png',
+  '/afterdark-images/sterling-green.webp': 'https://img.tailwindapp.net/images/d276/0d96/2e2e/ec535ba2569cf4f48006.png',
+  '/afterdark-images/noir-elegance.webp': 'https://img.tailwindapp.net/images/5564/21e9/a19a/f0be8a5ef8901e494cd6.png',
+  '/afterdark-images/duskworn.webp': 'https://img.tailwindapp.net/images/21ab/7418/1f87/41a53b6c9d7cb992d231.png',
+};
+
 function ImageFrame({
   src,
   alt,
@@ -174,7 +188,7 @@ function ImageFrame({
 }) {
   return (
     <div className={`image-frame ${className}`}>
-      <img src={src} alt={alt} loading={priority ? 'eager' : 'lazy'} />
+      <img src={src} alt={alt} loading={priority ? 'eager' : 'lazy'} onError={(event) => { const fallback = imageFallbacks[src]; if (fallback && event.currentTarget.src !== fallback) event.currentTarget.src = fallback; }} />
     </div>
   );
 }
@@ -249,7 +263,7 @@ function HomePage() {
         <div className="mood-grid">
           {collections.map((mood, index) => (
             <Link to={mood.link} className={`mood-card mood-${mood.tone}`} key={mood.name}>
-              <img src={mood.image} alt={`${mood.name} interior mood`} loading="lazy" />
+              <img src={mood.image} alt={`${mood.name} interior mood`} loading="lazy" onError={(event) => { const fallback = imageFallbacks[mood.image]; if (fallback && event.currentTarget.src !== fallback) event.currentTarget.src = fallback; }} />
               <div className="mood-card-shade" />
               <div className="mood-card-content">
                 <span>0{index + 1} / COLLECTION</span>

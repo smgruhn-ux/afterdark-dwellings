@@ -220,11 +220,11 @@ function ProductLink({ product, compact = false }: { product: Product; compact?:
 function HomePage() {
   const latest = guides.slice(0, 4);
   const collections = [
-    { name: 'Blue Sable', tone: 'sable', note: 'Inky blues / velvet / cool shadow', image: images.blueSable, link: '/spaces/living-rooms' },
+    { name: 'Blue Sable', tone: 'sable', note: 'Inky blues / velvet / cool shadow', image: '/38-tonal-blue-velvet-sectional.jpg', link: '/collections/blue-sable' },
     { name: 'Vesper Red', tone: 'vesper', note: 'Red velvet / black accents / rich contrast', image: images.vesperRed, link: '/spaces/living-rooms' },
-    { name: 'Sterling Green', tone: 'sterling', note: 'Deep green / architectural detail / soft light', image: images.sterlingGreen, link: '/spaces/bedrooms' },
+    { name: 'Sterling Green', tone: 'sterling', note: 'Deep green / architectural detail / soft light', image: '/50-teal-velvet-living-v3.jpg', link: '/collections/sterling-green' },
     { name: 'Noir Elegance', tone: 'noir', note: 'Black & ivory / ornate detail / candlelit', image: images.noirElegance, link: '/collections/noir-elegance' },
-    { name: 'Duskworn', tone: 'duskworn', note: 'Smoky patina / storm shades / aged surfaces', image: images.duskworn, link: '/spaces/entryways' },
+    { name: 'Duskworn', tone: 'duskworn', note: 'Smoky patina / storm shades / aged surfaces', image: '/Duskworn.PNG', link: '/collections/duskworn' },
   ];
   return (
     <>
@@ -501,6 +501,60 @@ function CuratedFindsPage() {
         <p className="disclosure wide">
           Retailer links on this page are provided for product discovery. If an affiliate relationship is activated and a tracked link is added, the relevant disclosure will be shown. Merchant pricing, stock, shipping, returns and warranty terms can change.
         </p>
+      </section>
+    </>
+  );
+}
+
+type PaletteCollection = 'blue-sable' | 'sterling-green' | 'duskworn';
+const paletteCollections: Record<PaletteCollection, { title: string; description: string; photos: { src: string; label: string }[] }> = {
+  'blue-sable': {
+    title: 'BLUE SABLE', description: 'Inky navy, slate velvet, and tonal blue rooms with architectural depth.',
+    photos: [
+      { src: '/38-tonal-blue-velvet-sectional.jpg', label: 'Tonal Blue Velvet Sectional' },
+      { src: '/39-tonal-blue-parlor-chair.jpg', label: 'Tonal Blue Parlor Chair' },
+      { src: '/42-tonal-blue-window-nook.jpg', label: 'Tonal Blue Window Nook' },
+      { src: '/46-cobalt-bay-window.jpg', label: 'Cobalt Bay Window' },
+      { src: '/47-slate-velvet-sofa-molding.jpg', label: 'Slate Velvet Sofa & Molding' },
+      { src: '/48-navy-entry-velvet-bench.jpg', label: 'Navy Entry Velvet Bench' },
+    ],
+  },
+  'sterling-green': {
+    title: 'STERLING GREEN', description: 'Deep teal, green velvet, and richly layered interiors.',
+    photos: [
+      { src: '/50-teal-velvet-living-v3.jpg', label: 'Teal Velvet Living Room' },
+      { src: '/51-teal-velvet-bedroom.jpg', label: 'Teal Velvet Bedroom' },
+      { src: '/52-teal-parlor-chesterfield.jpg', label: 'Teal Parlor Chesterfield' },
+      { src: '/sterling-green.webp', label: 'Sterling Green' },
+    ],
+  },
+  duskworn: {
+    title: 'DUSKWORN', description: 'Smoky, weathered surfaces and quietly dramatic rooms.',
+    photos: [
+      { src: '/Duskworn.PNG', label: 'Duskworn' },
+      { src: '/Duskworn%20-%20alt.PNG', label: 'Duskworn — Alternative' },
+    ],
+  },
+};
+function PaletteCollectionPage({ collection }: { collection: PaletteCollection }) {
+  const palette = paletteCollections[collection];
+  return (
+    <>
+      <SEO title={`${palette.title} | Afterdark Dwellings`} description={palette.description} />
+      <section className="content-section noir-elegance-collection">
+        <div className="noir-collection-heading">
+          <span className="eyebrow">THE PALETTE / {palette.title}</span>
+          <h1>{palette.title}.</h1>
+          <p>{palette.description}</p>
+        </div>
+        <div className="palette-photo-grid">
+          {palette.photos.map((photo) => (
+            <figure className="palette-photo" key={photo.src}>
+              <img src={photo.src} alt={photo.label} loading="lazy" />
+              <figcaption>{photo.label}</figcaption>
+            </figure>
+          ))}
+        </div>
       </section>
     </>
   );
@@ -848,6 +902,9 @@ export default function App() {
         <Route path="/spaces/:slug" element={<SpacePage />} />
         <Route path="/curated-finds" element={<CuratedFindsPage />} />
         <Route path="/shop-the-look" element={<ShopTheLookPage />} />
+        <Route path="/collections/blue-sable" element={<PaletteCollectionPage collection="blue-sable" />} />
+        <Route path="/collections/sterling-green" element={<PaletteCollectionPage collection="sterling-green" />} />
+        <Route path="/collections/duskworn" element={<PaletteCollectionPage collection="duskworn" />} />
         <Route path="/collections/noir-elegance" element={<NoirElegancePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />

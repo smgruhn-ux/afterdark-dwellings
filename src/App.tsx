@@ -121,7 +121,7 @@ function Layout({ children }: { children: ReactNode }) {
         <div className="footer-lead">
           <span className="eyebrow">AFTERDARK DWELLINGS</span>
           <p>Dark interiors, considered objects, and home upgrades worth bringing inside.</p>
-          <a href={site.pinterest} target="_blank" rel="noreferrer">@afterdarkdwellings</a>
+          <a href={site.pinterest} target="_blank" rel="noreferrer">@afterdarkdwellings_</a>
         </div>
         <div>
           <h2>Explore</h2>
@@ -216,101 +216,83 @@ function ProductLink({ product, compact = false }: { product: Product; compact?:
 }
 
 function HomePage() {
-  const latest = guides.slice(0, 6);
-  const shopIdeas = products.slice(0, 4);
-
+  const latest = guides.slice(0, 4);
+  const collections = [
+    { name: 'Blue Sable', tone: 'sable', note: 'Inky blues / velvet / cool shadow', image: images.main, link: '/spaces/living-rooms' },
+    { name: 'Vesper Red', tone: 'vesper', note: 'Red velvet / black accents / rich contrast', image: images.blackStone, link: '/spaces/living-rooms' },
+    { name: 'Sterling Green', tone: 'sterling', note: 'Deep green / architectural detail / soft light', image: images.entryway, link: '/spaces/bedrooms' },
+    { name: 'Noir Elegance', tone: 'noir', note: 'Black & ivory / ornate detail / candlelit', image: images.bathroom, link: '/spaces/living-rooms' },
+    { name: 'Duskworn', tone: 'duskworn', note: 'Smoky patina / storm shades / aged surfaces', image: images.office, link: '/spaces/entryways' },
+  ];
   return (
     <>
-      <SEO title="Afterdark Dwellings | Interiors / Objects / Atmosphere" description={HOME_DESCRIPTION} />
-      <section className="hero">
+      <SEO title="Afterdark Dwellings | Dark Interiors, Rooms & Curated Home Finds" description="Discover color-drenched, atmospheric interiors, practical dark room guides, and carefully sourced home finds at Afterdark Dwellings." />
+      <section className="hero new-hero">
         <div className="hero-copy">
-          <span className="eyebrow">INTERIORS / OBJECTS / ATMOSPHERE</span>
-          <h1>AFTERDARK<br />DWELLINGS</h1>
-          <p>Dark interiors, considered objects, and home upgrades worth bringing inside.</p>
+          <span className="eyebrow">THE ART OF LIVING AFTER DARK · EST. 2026</span>
+          <h1>BEAUTY<br /><i>IN THE</i><br />DARK.</h1>
+          <p>Color-drenched rooms. Velvet, shadow, and architectural detail. Explore atmospheric interiors—and discover real pieces to bring the look home.</p>
           <div className="hero-actions">
-            <Link className="button light" to="/guides">Explore the edit</Link>
-            <Link className="text-link" to={`/guides/${guides[0].slug}`}>Latest guides →</Link>
+            <Link className="button light" to="/shop-the-look">Explore the looks ↗</Link>
+            <Link className="text-link" to="/spaces">Browse rooms →</Link>
           </div>
+          <div className="hero-footnote"><span>AFTERDARK DWELLINGS</span><span>INTERIORS / ATMOSPHERE / OBJECTS</span></div>
         </div>
-        <ImageFrame
-          src={images.blackStone}
-          alt="Dark architectural interior with black stone and warm directional lighting."
-          className="hero-image"
-          priority
-        />
-      </section>
-
-      <section className="trust-band" aria-label="Afterdark Dwellings editorial standards">
-        <div>
-          <span>01</span>
-          <strong>ORIGINAL GUIDES</strong>
-          <p>Practical editorial built around real design decisions, not recycled trend lists.</p>
-        </div>
-        <div>
-          <span>02</span>
-          <strong>VERIFIED DESTINATIONS</strong>
-          <p>Purchasable recommendations point to real merchant pages before they appear as live finds.</p>
-        </div>
-        <div>
-          <span>03</span>
-          <strong>NO INVENTED LISTINGS</strong>
-          <p>No fabricated prices, ratings, reviews, availability or affiliate relationships.</p>
+        <div className="new-hero-visual">
+          <ImageFrame src={images.main} alt="Moody architectural interior with layered shadow and warm accent lighting." className="hero-image" priority />
+          <div className="hero-image-caption"><span>01 — THE AFTERDARK EDIT</span><strong>Live beautifully. Stay in the shadows.</strong></div>
         </div>
       </section>
-
-      <section className="content-section">
-        <SectionTitle index="01 / EDITORIAL" title="THE LATEST" copy="Original guides for darker rooms that still need to function, breathe, and feel deliberate." />
-        <div className="guide-grid">
-          {latest.map((guide) => <GuideCard guide={guide} key={guide.slug} />)}
-        </div>
-        <div className="section-cta"><Link className="text-link" to="/guides">View all guides →</Link></div>
-      </section>
-
-      <section className="content-section space-section">
-        <SectionTitle index="02 / ROOMS" title="EXPLORE BY SPACE" copy="Start with the room, then move from insight to products to Pinterest inspiration." />
-        <div className="space-grid">
-          {spaces.map((space) => (
-            <Link className="space-card" to={`/spaces/${space.slug}`} key={space.slug}>
-              <ImageFrame src={space.image} alt={space.imageAlt} />
-              <div>
-                <span>{space.kicker}</span>
-                <h3>{space.name}</h3>
-                <p>{space.intro}</p>
+      <div className="mood-ticker" aria-label="Our design language"><span>VELVET & SHADOW</span><span>◆</span><span>COLOR-DRENCHED WALLS</span><span>◆</span><span>LIGHT WITH INTENTION</span><span>◆</span><span>RECREATE THE LOOK</span></div>
+      <section className="content-section collections-section">
+        <SectionTitle index="01 / THE PALETTE" title="MOODS TO LIVE IN." copy="Not one shade of dark. Explore the palettes and details behind our Pinterest inspiration." />
+        <div className="mood-grid">
+          {collections.map((mood, index) => (
+            <Link to={mood.link} className={`mood-card mood-${mood.tone}`} key={mood.name}>
+              <img src={mood.image} alt={`${mood.name} interior mood`} loading="lazy" />
+              <div className="mood-card-shade" />
+              <div className="mood-card-content">
+                <span>0{index + 1} / COLLECTION</span>
+                <h3>{mood.name}</h3>
+                <p>{mood.note}</p>
+                <em>Explore interiors ↗</em>
               </div>
             </Link>
           ))}
         </div>
+        <p className="collections-disclaimer">Color collections are editorial inspiration; room pages feature practical ideas and relevant finds, not claimed exact product matches.</p>
       </section>
-
-      <section className="philosophy">
-        <div className="philosophy-image">
-          <ImageFrame src={images.entryway} alt="Dark entryway with architectural wall lighting and strong negative space." />
-        </div>
-        <div className="philosophy-copy">
-          <span className="eyebrow">03 / POINT OF VIEW</span>
-          <h2>DESIGN<br />AFTERDARK.</h2>
-          <p>Dark rooms are not successful because they are black. They work when material, light, texture, scale, contrast and negative space are controlled as one composition.</p>
-          <dl>
-            <div><dt>Material</dt><dd>Let stone, wood, glass, textile and metal create movement.</dd></div>
-            <div><dt>Light</dt><dd>Put brightness where the room functions and let shadow remain part of the architecture.</dd></div>
-            <div><dt>Space</dt><dd>Fewer stronger objects usually create a more expensive room than constant visual filling.</dd></div>
-          </dl>
+      <section className="statement-section">
+        <span className="eyebrow">DESIGN IS MORE THAN A COLOR</span>
+        <h2>NOT JUST DARK.<br /><em>DEEPLY FELT.</em></h2>
+        <p>Smoky blue. Blackened stone. Rich red velvet. Reflective brass. Walls that hold shadow, and light that makes every material come alive.</p>
+        <Link className="text-link" to="/guides">Read the design guides →</Link>
+      </section>
+      <section className="content-section editorial-rooms">
+        <SectionTitle index="02 / ROOM BY ROOM" title="FIND YOUR SPACE." copy="From dramatic entryways to richly layered bedrooms, start with a room you can actually transform." />
+        <div className="space-grid">
+          {spaces.map((space) => (
+            <Link className="space-card" to={`/spaces/${space.slug}`} key={space.slug}>
+              <ImageFrame src={space.image} alt={space.imageAlt} />
+              <div><span>{space.kicker}</span><h3>{space.name}</h3><p>{space.intro}</p><em>Explore room →</em></div>
+            </Link>
+          ))}
         </div>
       </section>
-
-      <section className="content-section">
-        <SectionTitle index="04 / SHOP THE IDEA" title="FROM PRINCIPLE TO PRODUCT" copy="Useful products belong next to the design decision they can actually help execute." />
-        <div className="product-grid">
-          {shopIdeas.map((product) => <ProductLink product={product} key={product.id} />)}
-        </div>
-        <div className="section-cta"><Link className="text-link" to="/curated-finds">Browse Curated Finds →</Link></div>
+      <section className="shop-promise">
+        <div><span className="eyebrow">03 / THE REAL-LIFE EDIT</span><h2>LOVE THE ROOM?<br /><i>MAKE IT YOURS.</i></h2></div>
+        <div><p>Beautiful inspiration should lead somewhere useful. Explore room guides, discover comparable décor and materials, and shop existing retailer listings—not imaginary products.</p><Link className="button light" to="/shop-the-look">Shop the look ↗</Link><Link className="text-link" to="/curated-finds">See curated finds →</Link></div>
       </section>
-
-      <section className="pinterest-band">
-        <span className="eyebrow">MORE AFTERDARK</span>
-        <h2>Save the rooms worth remembering.</h2>
-        <p>Follow @afterdarkdwellings for interiors, objects, materials, lighting, and ideas worth saving.</p>
-        <a className="button dark" href={site.pinterest} target="_blank" rel="noreferrer">Open Pinterest</a>
+      <section className="content-section latest-section">
+        <SectionTitle index="04 / THE JOURNAL" title="DESIGN AFTER DARK." copy="Guides for creating strong atmosphere with real choices in texture, light, scale and finish." />
+        <div className="guide-grid">{latest.map(guide => <GuideCard guide={guide} key={guide.slug} />)}</div>
+        <div className="section-cta"><Link className="text-link" to="/guides">All design guides →</Link></div>
+      </section>
+      <section className="pinterest-band refreshed-pinterest">
+        <span className="eyebrow">SAVE WHAT MOVES YOU</span>
+        <h2>Follow the darker side of design.</h2>
+        <p>Explore Blue Sable, Vesper Red, Sterling Green, Noir Elegance and more on Pinterest.</p>
+        <a className="button light" href={site.pinterest} target="_blank" rel="noreferrer">Pinterest · @afterdarkdwellings__ ↗</a>
       </section>
     </>
   );
@@ -712,7 +694,7 @@ function ContactPage() {
         <p className="lede">Corrections, partnerships and editorial inquiries can be sent directly by email.</p>
         <p><a className="large-email" href={`mailto:${site.email}`}>{site.email}</a></p>
         <h2>Pinterest</h2>
-        <p><a href={site.pinterest} target="_blank" rel="noreferrer">@afterdarkdwellings</a></p>
+        <p><a href={site.pinterest} target="_blank" rel="noreferrer">@afterdarkdwellings_</a></p>
       </TextPage>
     </>
   );

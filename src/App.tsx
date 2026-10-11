@@ -515,7 +515,8 @@ function NoirElegancePage() {
       alt: 'Noir Elegance bedroom composition with ornate, wing-inspired details.',
       description: 'Build the atmosphere with a dark foundation, tactile bedding, and precisely placed low lighting. Let one sculptural feature take the lead.',
       links: [
-        { text: 'Explore a black wall sconce · Lowe’s', href: 'https://www.lowes.com/pd/IUEST-Indoor-Wall-Sconce-Dimmable-10W-Modern-LED-Wall-Lamp-Black-Up-Down-Wall-Mount-Mini-Metal-for-Living-Room-Bedroom-Hallway-Decor-Warm-White/105789421' },
+        { text: 'Silver and pewter damask bedding · Bed Bath & Beyond', href: 'https://www.bedbathandbeyond.com/Bedding-Bath/Five-Queens-Court-Lafayette-Comforter-Set/31919466/product.html?option=58868684' },
+        { text: 'Black and ivory traditional floral rug · Wayfair', href: 'https://www.wayfair.com/rugs/pdp/astoria-grand-weisgerber-oriental-blackivory-area-rug-astd4602.html?piid=1' },
       ],
     },
     {
@@ -525,7 +526,8 @@ function NoirElegancePage() {
       alt: 'Ornate Noir Elegance console scene with raven-inspired detailing.',
       description: 'Treat the console like a still life: a strong focal object, restrained accessories, and enough empty surface to frame the silhouette.',
       links: [
-        { text: 'Explore a black styling tray · Walmart', href: 'https://www.walmart.com/ip/15339169308' },
+        { text: 'Antique-style black carved floral cabinet · Wayfair', href: 'https://www.wayfair.com/furniture/pdp/astoria-grand-vintage-hollow-carved-accent-cabinet-2-door-display-storage-sideboard-with-symmetrical-floral-design-adjustable-shelf-and-solid-wood-legs-for-living-room-entryway-w119246125.html?piid=125431776' },
+        { text: 'Carved floral furniture detailing for restoration · Etsy', href: 'https://www.etsy.com/listing/1736086397/3d-wood-moulding-onlay-floral-carved' },
       ],
     },
     {
@@ -535,7 +537,8 @@ function NoirElegancePage() {
       alt: 'Moody Noir Elegance chaise lounge corner with decorative filigree.',
       description: 'Anchor a quiet corner with black velvet seating. Keep surrounding objects secondary so the chair and architectural detail remain the focus.',
       links: [
-        { text: 'Explore a black velvet chaise · Walmart', href: 'https://www.walmart.com/ip/1065170804' },
+        { text: 'Carved Victorian chaise with custom upholstery and finish · Laurel Crown', href: 'https://www.laurelcrown.com/victorian-single-end-show-frame-sofa' },
+        { text: 'Black ruffled lace drape · Etsy', href: 'https://www.etsy.com/listing/1287925471/black-ruffle-lace-throw-elegant' },
       ],
     },
   ];

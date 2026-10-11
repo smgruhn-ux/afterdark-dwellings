@@ -72,7 +72,7 @@ function ScrollToTop() {
 function BrandMark() {
   return (
     <Link className="brand" to="/" aria-label="Afterdark Dwellings home">
-      <span className="brand-mark">AD</span>
+      <img className="brand-logo" src="/afterdark-images/afterdark_dwellings_logo.webp" alt="After Dark Dwellings logo" />
       <span className="brand-copy">
         <strong>AFTERDARK</strong>
         <em>DWELLINGS</em>

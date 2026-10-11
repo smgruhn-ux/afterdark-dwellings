@@ -218,11 +218,11 @@ function ProductLink({ product, compact = false }: { product: Product; compact?:
 function HomePage() {
   const latest = guides.slice(0, 4);
   const collections = [
-    { name: 'Blue Sable', tone: 'sable', note: 'Inky blues / velvet / cool shadow', image: images.main, link: '/spaces/living-rooms' },
-    { name: 'Vesper Red', tone: 'vesper', note: 'Red velvet / black accents / rich contrast', image: images.blackStone, link: '/spaces/living-rooms' },
-    { name: 'Sterling Green', tone: 'sterling', note: 'Deep green / architectural detail / soft light', image: images.entryway, link: '/spaces/bedrooms' },
-    { name: 'Noir Elegance', tone: 'noir', note: 'Black & ivory / ornate detail / candlelit', image: images.bathroom, link: '/spaces/living-rooms' },
-    { name: 'Duskworn', tone: 'duskworn', note: 'Smoky patina / storm shades / aged surfaces', image: images.office, link: '/spaces/entryways' },
+    { name: 'Blue Sable', tone: 'sable', note: 'Inky blues / velvet / cool shadow', image: images.blueSable, link: '/spaces/living-rooms' },
+    { name: 'Vesper Red', tone: 'vesper', note: 'Red velvet / black accents / rich contrast', image: images.vesperRed, link: '/spaces/living-rooms' },
+    { name: 'Sterling Green', tone: 'sterling', note: 'Deep green / architectural detail / soft light', image: images.sterlingGreen, link: '/spaces/bedrooms' },
+    { name: 'Noir Elegance', tone: 'noir', note: 'Black & ivory / ornate detail / candlelit', image: images.noirElegance, link: '/spaces/living-rooms' },
+    { name: 'Duskworn', tone: 'duskworn', note: 'Smoky patina / storm shades / aged surfaces', image: images.duskworn, link: '/spaces/entryways' },
   ];
   return (
     <>

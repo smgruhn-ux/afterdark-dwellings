@@ -27,7 +27,7 @@ export const images = {
 export type Product = {
   id: string;
   name: string;
-  merchant: 'Walmart' | "Lowe's";
+  merchant: 'Walmart' | "Lowe's" | 'Target' | 'Home Depot';
   category: string;
   editorialNote: string;
   destinationUrl: string;
@@ -37,6 +37,36 @@ export type Product = {
 };
 
 export const products: Product[] = [
+  {
+    id: 'target-black-ivory-floral-rug',
+    name: 'Safavieh Blossom Black/Ivory Floral Wool Rug',
+    merchant: 'Target',
+    category: 'Rugs',
+    editorialNote: 'A detailed black-and-ivory botanical rug for a dark velvet seating area or paneled bedroom; confirm size and pattern before ordering.',
+    destinationUrl: 'https://www.target.com/p/-/A-88575444',
+    verified: true,
+    relatedSpaces: ["living-rooms","bedrooms"],
+  },
+  {
+    id: 'homedepot-black-ornate-mirror',
+    name: 'Kate and Laurel Arendahl Black Ornate Arch Mirror',
+    merchant: 'Home Depot',
+    category: 'Mirrors',
+    editorialNote: 'An antique-black, baroque-inspired frame that suits a paneled entryway or dark sitting room; place it to reflect a useful view.',
+    destinationUrl: 'https://www.homedepot.com/p/331450119',
+    verified: true,
+    relatedSpaces: ["entryways","small-spaces"],
+  },
+  {
+    id: 'target-black-ivory-accent-rug',
+    name: 'Safavieh Metro Black/Ivory Botanical Accent Rug',
+    merchant: 'Target',
+    category: 'Rugs',
+    editorialNote: 'A small black-and-ivory botanical rug with traditional detail for a compact reading area or entry; measure clearance first.',
+    destinationUrl: 'https://www.target.com/p/-/A-88211554',
+    verified: true,
+    relatedSpaces: ["entryways","small-spaces"],
+  },
   {
     id: 'walmart-wall-sconce',
     name: 'Better Homes & Gardens Matte Black 1-Light Indoor Wall Sconce',
@@ -147,7 +177,7 @@ export const products: Product[] = [
       { number: '01', title: 'Color-Drench the Architecture', copy: 'Choose a primary shade—ink blue, deep forest green, burgundy, or charcoal—and take it across walls and trim. Shift the furniture one or two tones to keep the silhouettes legible.' },
       { number: '02', title: 'Use Warm, Low Lighting', copy: 'Several lower light sources usually create more depth than one harsh ceiling fixture. Keep brightness close to the places where the room actually functions.' },
       { number: '03', title: 'Mix Your Textures', copy: 'Put matte color-drenched walls beside velvet seating, smoked wood and one polished or honed stone surface. Photograph samples together in daylight and lamplight before committing.' },
-      { number: '04', title: 'Choose Fewer, Larger Pieces', copy: 'Choose a single focal point: a large atmospheric painting, sculptural chair, or dramatic fireplace. Keep adjacent shelves and tables sparse enough for the focal point to register.' },
+      { number: '04', title: 'Choose Fewer, Larger Pieces', copy: 'Choose a single focal point: a large atmospheric painting, sculptural chair, or dramatic fireplace. Keep adjacent shelves and tables sparse enough for the focal point to register.', productId: 'target-black-ivory-floral-rug' },
       { number: '05', title: 'Bring In Natural Stone', copy: 'Stone introduces natural movement and variation without requiring bright color. Use it as an architectural surface or as one weighty object.' },
       { number: '06', title: 'Add Warm Contrast', copy: 'Warm wood, aged metal, pale stone or controlled warm light can break up black and charcoal without turning the room beige.' },
       { number: '07', title: 'Leave Negative Space', copy: 'Not every wall, shelf or corner needs to be filled. Empty space makes strong materials and objects feel more important.' },
@@ -184,7 +214,7 @@ export const products: Product[] = [
     steps: [
       { number: '01', title: 'Use More Than One Dark Tone', copy: 'Carry storm blue, charcoal, or deep green onto the trim for a continuous backdrop, then contrast it with a headboard in another texture or shade.' },
       { number: '02', title: 'Soften With Texture, Not Pastel Color', copy: 'Layer velvet or brushed cotton with breathable linen sheets and one textured throw. Keep patterns restrained if the headboard or wall molding is ornate.', productId: 'lowes-deep-green-velvet-drapes' },
-      { number: '03', title: 'Keep the Bed Visually Simple', copy: 'Choose whether the headboard, artwork, or wall paneling is the focal point. Use solid bedding beneath a dramatic headboard; reserve patterned bedding for simpler furniture.' },
+      { number: '03', title: 'Keep the Bed Visually Simple', copy: 'Choose whether the headboard, artwork, or wall paneling is the focal point. Use solid bedding beneath a dramatic headboard; reserve patterned bedding for simpler furniture.', productId: 'target-black-ivory-floral-rug' },
       { number: '04', title: 'Use Low Light at More Than One Height', copy: 'Bedside lamps, sconces and a low floor lamp create a calmer rhythm than one ceiling fixture.' },
       { number: '05', title: 'Protect Negative Space', copy: 'Leave some wall, nightstand and floor area unfilled. Dark rooms feel more expensive when strong objects have space around them.' },
     ],
@@ -256,7 +286,7 @@ export const products: Product[] = [
     steps: [
       { number: '01', title: 'Use Tonal Variation Instead of Bright Contrast', copy: 'Measure circulation and door swing first. Use a shallow console, slim upholstered chair or wall-mounted lamp instead of collecting small furniture pieces that crowd the floor.' },
       { number: '02', title: 'Choose Fewer Pieces With Cleaner Profiles', copy: 'Fewer, better-scaled pieces create fewer visual edges and usually make a compact room feel larger.' },
-      { number: '03', title: 'Use Reflection Strategically', copy: 'Hang a framed mirror where it reflects a window, lamp, or an uncluttered sightline. Check the reflection from the doorway before drilling.' },
+      { number: '03', title: 'Use Reflection Strategically', copy: 'Hang a framed mirror where it reflects a window, lamp, or an uncluttered sightline. Check the reflection from the doorway before drilling.', productId: 'homedepot-black-ornate-mirror' },
       { number: '04', title: 'Keep the Floor Line Visible', copy: 'Clear floor around furniture helps the eye understand the full footprint of the room.' },
       { number: '05', title: 'Light Vertical Surfaces', copy: 'Wall lighting or upward washes draw the eye vertically and make the room feel taller.' },
     ],
@@ -273,7 +303,7 @@ export const products: Product[] = [
     relatedSpaces: ['living-rooms'],
     steps: [
       { number: '01', title: 'Start With One Dominant Dark Tone', copy: 'Choose a defined palette: smoky blue and teal velvet, green-black and aged nickel, or burgundy and charcoal. Repeat the dominant color across architecture and one substantial upholstery piece.' },
-      { number: '02', title: 'Use One Large Anchor Instead of Many Small Pieces', copy: 'Measure the sofa against the wall and rug first. Use one prominent secondary object—an oversized framed painting or dark stone table—rather than several competing statement pieces.' },
+      { number: '02', title: 'Use One Large Anchor Instead of Many Small Pieces', copy: 'Measure the sofa against the wall and rug first. Use one prominent secondary object—an oversized framed painting or dark stone table—rather than several competing statement pieces.', productId: 'target-black-ivory-floral-rug' },
       { number: '03', title: 'Let Lighting Reveal the Room in Layers', copy: 'Combine a low floor lamp, table lamp, sconces or concealed light. Separate pools of light create depth.' },
       { number: '04', title: 'Mix Matte, Soft and Reflective Surfaces', copy: 'Velvet, brushed textile, honed stone, glass and metal should react differently to light.' },
       { number: '05', title: 'Edit the Styling Hard', copy: 'Group no more than a few pieces on the coffee table: a substantial book, a low dark vessel, or a sculptural object. Leave enough open tabletop for everyday use.' },
@@ -309,8 +339,8 @@ export const products: Product[] = [
     relatedSpaces: ['entryways'],
     steps: [
       { number: '01', title: 'Light the Vertical Surfaces', copy: 'Measure the walkway and door clearance before selecting a carved console or upholstered bench, then place a framed mirror where its reflection is worth seeing.' },
-      { number: '02', title: 'Use One Mirror With Purpose', copy: 'Position an antiqued or carved-frame mirror to catch a lamp or window, then check that it reflects something worth seeing rather than a coat rack or doorway clutter.' },
-      { number: '03', title: 'Choose One Strong Console or Bench', copy: 'Measure door swing and clear walking width before choosing a narrow dark-wood console or upholstered bench. A single substantial piece beats several tiny accent tables.' },
+      { number: '02', title: 'Use One Mirror With Purpose', copy: 'Position an antiqued or carved-frame mirror to catch a lamp or window, then check that it reflects something worth seeing rather than a coat rack or doorway clutter.', productId: 'homedepot-black-ornate-mirror' },
+      { number: '03', title: 'Choose One Strong Console or Bench', copy: 'Measure door swing and clear walking width before choosing a narrow dark-wood console or upholstered bench. A single substantial piece beats several tiny accent tables.', productId: 'target-black-ivory-accent-rug' },
       { number: '04', title: 'Use Stone or Metal for Visual Weight', copy: 'A dark stone top or blackened metal detail can make the entry feel finished without adding lots of color.' },
       { number: '05', title: 'Control What Is Visible From the Door', copy: 'The first view should have one focal point and a clean line of sight.' },
     ],

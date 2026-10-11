@@ -6,12 +6,22 @@ export const site = {
 };
 
 export const images = {
-  main: 'https://img.tailwindapp.net/images/cae9/c356/7631/708a0d852433de724063.png',
-  bathroom: 'https://img.tailwindapp.net/images/c662/ea9f/c1b1/e3bb9198d75259925f41.png',
-  office: 'https://img.tailwindapp.net/images/21ab/7418/1f87/41a53b6c9d7cb992d231.png',
-  smallSpace: 'https://img.tailwindapp.net/images/c687/cfb1/3488/8c0ee7e6c1a024dede23.png',
-  blackStone: 'https://img.tailwindapp.net/images/5564/21e9/a19a/f0be8a5ef8901e494cd6.png',
-  entryway: 'https://img.tailwindapp.net/images/d276/0d96/2e2e/ec535ba2569cf4f48006.png',
+  main: '/afterdark-images/blue-sable.webp',
+  bathroom: '/afterdark-images/dark-bathrooms.webp',
+  office: '/afterdark-images/duskworn.webp',
+  smallSpace: '/afterdark-images/blue-sable-alt.webp',
+  blackStone: '/afterdark-images/noir-elegance.webp',
+  entryway: '/afterdark-images/dark-entryways.webp',
+  blueSable: '/afterdark-images/blue-sable.webp',
+  blueSableAlt: '/afterdark-images/blue-sable-alt.webp',
+  vesperRed: '/afterdark-images/vesper-red.webp',
+  sterlingGreen: '/afterdark-images/sterling-green.webp',
+  noirElegance: '/afterdark-images/noir-elegance.webp',
+  duskworn: '/afterdark-images/duskworn.webp',
+  darkEntryways: '/afterdark-images/dark-entryways.webp',
+  darkBathrooms: '/afterdark-images/dark-bathrooms.webp',
+  gothicBlueMirror: '/afterdark-images/gothic-blue-mirror.webp',
+  darkBlueParlor: '/afterdark-images/dark-blue-parlor.webp',
 };
 
 export type Product = {

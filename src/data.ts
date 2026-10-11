@@ -6,20 +6,20 @@ export const site = {
 };
 
 export const images = {
-  main: '/afterdark-images/blue-sable.webp',
-  bathroom: '/afterdark-images/dark-bathrooms.webp',
-  office: '/afterdark-images/duskworn.webp',
+  main: '/afterdark-images/dark-blue-parlor.webp',
+  bathroom: '/afterdark-images/gothic-blue-mirror.webp',
+  office: '/afterdark-images/muted-gray-sable.webp',
   smallSpace: '/afterdark-images/blue-sable-alt.webp',
   blackStone: '/afterdark-images/noir-elegance.webp',
   entryway: '/afterdark-images/dark-entryways.webp',
-  blueSable: '/afterdark-images/blue-sable.webp',
+  blueSable: '/afterdark-images/dark-blue-parlor.webp',
   blueSableAlt: '/afterdark-images/blue-sable-alt.webp',
   vesperRed: '/afterdark-images/vesper-red.webp',
   sterlingGreen: '/afterdark-images/sterling-green.webp',
-  noirElegance: '/afterdark-images/noir-elegance.webp',
-  duskworn: '/afterdark-images/duskworn.webp',
+  noirElegance: '/afterdark-images/dark-noir-elegance-raven-sage-velvet.JPG',
+  duskworn: '/afterdark-images/Duskworn - alt.PNG',
   darkEntryways: '/afterdark-images/dark-entryways.webp',
-  darkBathrooms: '/afterdark-images/dark-bathrooms.webp',
+  darkBathrooms: '/afterdark-images/gothic-blue-mirror.webp',
   gothicBlueMirror: '/afterdark-images/gothic-blue-mirror.webp',
   darkBlueParlor: '/afterdark-images/dark-blue-parlor.webp',
 };

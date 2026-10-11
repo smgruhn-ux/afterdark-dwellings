@@ -1652,3 +1652,18 @@ body{background:linear-gradient(145deg,#080d19 0%,#06070b 40%,#0b0b11 100%)}
 .site-header .brand { gap:0; }
 .site-header .brand-copy strong { font-family:Cinzel,serif; font-size:clamp(.95rem,1.5vw,1.12rem); letter-spacing:.19em; font-weight:500; color:#e8e6e6; }
 .site-header .brand-copy em { font-family:Cinzel,serif; font-size:.59rem; letter-spacing:.44em; color:#c6c8cf; margin-top:.42rem; }
+
+/* Noir Elegance collection — intentionally scoped to this collection only. */
+.noir-elegance-collection{max-width:1280px;margin-inline:auto}
+.noir-collection-heading{max-width:790px;margin-bottom:clamp(2rem,5vw,4rem)}
+.noir-collection-heading h1{font-size:clamp(2.5rem,6vw,5.7rem);line-height:1.03;margin:.65rem 0 1.15rem}
+.noir-collection-heading p{max-width:640px;line-height:1.75}
+.noir-scene-list{display:grid;gap:clamp(2.5rem,6vw,5rem)}
+.noir-scene{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(290px,.8fr);align-items:center;gap:clamp(1.5rem,4vw,4rem)}
+.noir-scene>img{width:100%;height:auto;max-height:750px;object-fit:cover;display:block}
+.noir-scene-copy h2{font-size:clamp(1.9rem,3.8vw,3.5rem);line-height:1.12;margin:1rem 0}
+.noir-scene-copy p{line-height:1.8}
+.noir-scene-links{display:flex;flex-direction:column;gap:1rem;margin-top:1.75rem}
+.noir-scene-links a{display:inline-block;width:fit-content;text-decoration:underline;text-underline-offset:5px}
+.noir-collection-note{font-size:.83rem;opacity:.75;max-width:710px;line-height:1.7;margin-top:3rem}
+@media(max-width:760px){.noir-scene{grid-template-columns:1fr}.noir-scene>img{max-height:none}.noir-scene-copy{padding-bottom:.5rem}}

@@ -223,7 +223,7 @@ function HomePage() {
     { name: 'Blue Sable', tone: 'sable', note: 'Inky blues / velvet / cool shadow', image: images.blueSable, link: '/spaces/living-rooms' },
     { name: 'Vesper Red', tone: 'vesper', note: 'Red velvet / black accents / rich contrast', image: images.vesperRed, link: '/spaces/living-rooms' },
     { name: 'Sterling Green', tone: 'sterling', note: 'Deep green / architectural detail / soft light', image: images.sterlingGreen, link: '/spaces/bedrooms' },
-    { name: 'Noir Elegance', tone: 'noir', note: 'Black & ivory / ornate detail / candlelit', image: images.noirElegance, link: '/spaces/living-rooms' },
+    { name: 'Noir Elegance', tone: 'noir', note: 'Black & ivory / ornate detail / candlelit', image: images.noirElegance, link: '/collections/noir-elegance' },
     { name: 'Duskworn', tone: 'duskworn', note: 'Smoky patina / storm shades / aged surfaces', image: images.duskworn, link: '/spaces/entryways' },
   ];
   return (
@@ -506,6 +506,74 @@ function CuratedFindsPage() {
   );
 }
 
+function NoirElegancePage() {
+  const scenes = [
+    {
+      title: 'The Winged Bedroom',
+      label: '01 / BEDROOM',
+      image: '/57-noir-bedroom-wings-v2.jpg',
+      alt: 'Noir Elegance bedroom composition with ornate, wing-inspired details.',
+      description: 'Build the atmosphere with a dark foundation, tactile bedding, and precisely placed low lighting. Let one sculptural feature take the lead.',
+      links: [
+        { text: 'Explore a black wall sconce · Lowe’s', href: 'https://www.lowes.com/pd/IUEST-Indoor-Wall-Sconce-Dimmable-10W-Modern-LED-Wall-Lamp-Black-Up-Down-Wall-Mount-Mini-Metal-for-Living-Room-Bedroom-Hallway-Decor-Warm-White/105789421' },
+      ],
+    },
+    {
+      title: 'The Raven Console',
+      label: '02 / CONSOLE',
+      image: '/58-noir-console-raven.jpg',
+      alt: 'Ornate Noir Elegance console scene with raven-inspired detailing.',
+      description: 'Treat the console like a still life: a strong focal object, restrained accessories, and enough empty surface to frame the silhouette.',
+      links: [
+        { text: 'Explore a black styling tray · Walmart', href: 'https://www.walmart.com/ip/15339169308' },
+      ],
+    },
+    {
+      title: 'The Filigree Corner',
+      label: '03 / LOUNGE',
+      image: '/61-noir-chaise-corner-filigree.jpg',
+      alt: 'Moody Noir Elegance chaise lounge corner with decorative filigree.',
+      description: 'Anchor a quiet corner with black velvet seating. Keep surrounding objects secondary so the chair and architectural detail remain the focus.',
+      links: [
+        { text: 'Explore a black velvet chaise · Walmart', href: 'https://www.walmart.com/ip/1065170804' },
+      ],
+    },
+  ];
+
+  return (
+    <>
+      <SEO title="Noir Elegance | Afterdark Dwellings" description="Three richly detailed Noir Elegance interior scenes with carefully chosen ways to recreate the atmosphere." />
+      <section className="content-section noir-elegance-collection">
+        <div className="noir-collection-heading">
+          <span className="eyebrow">THE PALETTE / NOIR ELEGANCE</span>
+          <h1>NOIR ELEGANCE.</h1>
+          <p>Dark velvet, ornate details, and sculptural contrast. Three distinct compositions, each with a considered starting point for bringing the atmosphere home.</p>
+        </div>
+        <div className="noir-scene-list">
+          {scenes.map((scene) => (
+            <article className="noir-scene" key={scene.label}>
+              <img src={scene.image} alt={scene.alt} loading="lazy" />
+              <div className="noir-scene-copy">
+                <span className="eyebrow">{scene.label}</span>
+                <h2>{scene.title}</h2>
+                <p>{scene.description}</p>
+                <div className="noir-scene-links">
+                  {scene.links.map((link) => (
+                    <a key={link.href} href={link.href} target="_blank" rel="nofollow noreferrer">
+                      {link.text} ↗
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+        <p className="noir-collection-note">These are comparable pieces for inspiration, not claims that the photographed spaces contain the exact products. Retailer stock and pricing may change.</p>
+      </section>
+    </>
+  );
+}
+
 function ShopTheLookPage() {
   const looks = [
     {
@@ -777,6 +845,7 @@ export default function App() {
         <Route path="/spaces/:slug" element={<SpacePage />} />
         <Route path="/curated-finds" element={<CuratedFindsPage />} />
         <Route path="/shop-the-look" element={<ShopTheLookPage />} />
+        <Route path="/collections/noir-elegance" element={<NoirElegancePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/faq" element={<FAQPage />} />

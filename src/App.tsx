@@ -303,7 +303,7 @@ function HomePage() {
 function GuidesPage() {
   return (
     <>
-      <SEO title="Dark Interior Design Guides | Afterdark Dwellings" description="Original Afterdark Dwellings guides for dark living rooms, bedrooms, kitchens, bathrooms, offices, lighting, materials, and small spaces." />
+      <SEO title="Dark Interior Design Guides | Afterdark Dwellings" description="Original Afterdark Dwellings guides for dark living rooms, bedrooms, bathrooms, entryways, lighting, and small spaces." />
       <PageHero kicker="EDITORIAL / GUIDES" title="DESIGN NOTES AFTERDARK." copy="Practical original guides built around darker palettes, architectural light, material depth and rooms that feel deliberate rather than themed." />
       <section className="content-section">
         <div className="guide-grid">

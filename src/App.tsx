@@ -171,8 +171,6 @@ const imageFallbacks: Record<string, string> = {
   '/afterdark-images/dark-entryways.webp': 'https://img.tailwindapp.net/images/d276/0d96/2e2e/ec535ba2569cf4f48006.png',
   '/afterdark-images/vesper-red.webp': 'https://img.tailwindapp.net/images/cae9/c356/7631/708a0d852433de724063.png',
   '/afterdark-images/sterling-green.webp': 'https://img.tailwindapp.net/images/d276/0d96/2e2e/ec535ba2569cf4f48006.png',
-  '/afterdark-images/noir-elegance.webp': 'https://img.tailwindapp.net/images/5564/21e9/a19a/f0be8a5ef8901e494cd6.png',
-  '/afterdark-images/duskworn.webp': 'https://img.tailwindapp.net/images/21ab/7418/1f87/41a53b6c9d7cb992d231.png',
 };
 
 function ImageFrame({

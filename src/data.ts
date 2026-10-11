@@ -133,7 +133,35 @@ export const products: Product[] = [
     merchant: "Lowe's",
     category: 'Textiles',
     editorialNote: 'Deep green velvet panels add substantial texture and light control to a dark green or charcoal room. Check panel measurements and current availability.',
-    destinationUrl: 'https://www.lowes.com/pd/Topfinel-84-in-Dark-Green-Fulexport const guides: Guide[] = [
+    destinationUrl: 'https://www.lowes.com/',
+    verified: false,
+    relatedSpaces: ['bedrooms', 'living-rooms'],
+  },
+];
+
+export const getProduct = (id?: string) => products.find((product) => product.id === id);
+
+export type GuideStep = {
+  number: string;
+  title: string;
+  copy: string;
+  productId?: string;
+};
+
+export type Guide = {
+  slug: string;
+  category: string;
+  title: string;
+  deck: string;
+  readTime: string;
+  image: string;
+  imageAlt: string;
+  relatedSpaces: string[];
+  steps: GuideStep[];
+  rule: string;
+};
+
+export const guides: Guide[] = [
   {
     slug: '7-ways-to-make-a-dark-room-feel-expensive',
     category: 'Dark Interiors',
@@ -264,13 +292,6 @@ export const products: Product[] = [
   },
 ];
 
-es the entry a clear anchor and leaves enough open floor to breathe.' },
-      { number: '04', title: 'Use Stone or Metal for Visual Weight', copy: 'A dark stone top or blackened metal detail can make the entry feel finished without adding lots of color.' },
-      { number: '05', title: 'Control What Is Visible From the Door', copy: 'The first view should have one focal point and a clean line of sight.' },
-    ],
-    rule: 'The entry needs one clear focal point, enough light to read the materials and a clean path into the home.',
-  },
-];
 
 export const guideBySlug = Object.fromEntries(guides.map((guide) => [guide.slug, guide]));
 
@@ -294,7 +315,7 @@ export const spaces: Space[] = [
     intro: 'Build the room around one strong anchor, layered light and materials that react differently as the light falls off.',
     image: images.main,
     imageAlt: 'Dark editorial living room with layered black materials and warm architectural lighting.',
-    guideSlugs: ['dark-living-room-feel-expensive', '7-ways-to-make-a-dark-room-feel-expensive', 'layered-lighting-for-dark-interiors', 'black-and-stone-interiors'],
+    guideSlugs: ['dark-living-room-feel-expensive', '7-ways-to-make-a-dark-room-feel-expensive', 'layered-lighting-for-dark-interiors'],
     productCategories: ['Lighting', 'Furniture', 'Objects', 'Mirrors'],
     pinterestBoard: 'https://www.pinterest.com/afterdarkdwellings_/dark-living-rooms/',
   },
@@ -316,7 +337,7 @@ export const spaces: Space[] = [
     intro: 'Black kitchens stay dimensional when stone, grain, metal and task light create the contrast instead of more color.',
     image: images.blackStone,
     imageAlt: 'Black and stone interior with dark surfaces and warm architectural lighting.',
-    guideSlugs: ['black-kitchen-without-feeling-flat', 'black-and-stone-interiors', 'layered-lighting-for-dark-interiors'],
+    guideSlugs: ['layered-lighting-for-dark-interiors'],
     productCategories: ['Lighting', 'Kitchen', 'Storage', 'Objects'],
     pinterestBoard: 'https://www.pinterest.com/afterdarkdwellings_/dark-kitchens/',
   },
@@ -327,7 +348,7 @@ export const spaces: Space[] = [
     intro: 'Treat stone, reflection, hardware and face-level lighting as one composition, especially in smaller rooms.',
     image: images.bathroom,
     imageAlt: 'Dark bathroom with black stone, mirror lighting and refined metal details.',
-    guideSlugs: ['dark-bathroom-that-feels-expensive', 'layered-lighting-for-dark-interiors', 'black-and-stone-interiors'],
+    guideSlugs: ['dark-bathroom-that-feels-expensive', 'layered-lighting-for-dark-interiors'],
     productCategories: ['Lighting', 'Mirrors', 'Bath', 'Objects'],
     pinterestBoard: 'https://www.pinterest.com/afterdarkdwellings_/dark-bathrooms/',
   },
@@ -338,7 +359,7 @@ export const spaces: Space[] = [
     intro: 'Keep light where the work happens, storage visually quiet and one empty plane protected so darker finishes do not close in.',
     image: images.office,
     imageAlt: 'Dark home office with black wood and focused task lighting.',
-    guideSlugs: ['dark-home-office-without-feeling-closed-in', 'layered-lighting-for-dark-interiors'],
+    guideSlugs: ['layered-lighting-for-dark-interiors'],
     productCategories: ['Lighting', 'Furniture', 'Storage'],
     pinterestBoard: 'https://www.pinterest.com/afterdarkdwellings_/dark-home-offices/',
   },

@@ -1,0 +1,3 @@
+.site-header .brand-copy { display: block; width: clamp(155px, 20vw, 250px); height: 65px; background: url('/afterdark-logo.PNG') center / contain no-repeat; }
+.site-header .brand-copy strong, .site-header .brand-copy em { display: none; }
+@media (max-width: 600px) { .site-header .brand-copy { width: 170px; height: 58px; } }

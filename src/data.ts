@@ -127,31 +127,13 @@ export const products: Product[] = [
     verified: true,
     relatedSpaces: ['home-offices'],
   },
-];
-
-export const getProduct = (id: string) => products.find((product) => product.id === id);
-
-export type GuideStep = {
-  number: string;
-  title: string;
-  copy: string;
-  productId?: string;
-};
-
-export type Guide = {
-  slug: string;
-  category: string;
-  title: string;
-  deck: string;
-  readTime: string;
-  image: string;
-  imageAlt: string;
-  steps: GuideStep[];
-  rule: string;
-  relatedSpaces: string[];
-};
-
-export const guides: Guide[] = [
+  {
+    id: 'lowes-deep-green-velvet-drapes',
+    name: 'Topfinel Dark Green Full Blackout Velvet Curtain Panels',
+    merchant: "Lowe's",
+    category: 'Textiles',
+    editorialNote: 'Deep green velvet panels add substantial texture and light control to a dark green or charcoal room. Check panel measurements and current availability.',
+    destinationUrl: 'https://www.lowes.com/pd/Topfinel-84-in-Dark-Green-Fulexport const guides: Guide[] = [
   {
     slug: '7-ways-to-make-a-dark-room-feel-expensive',
     category: 'Dark Interiors',
@@ -162,10 +144,10 @@ export const guides: Guide[] = [
     imageAlt: 'Dark editorial living room with black and charcoal finishes, natural stone, and warm architectural lighting.',
     relatedSpaces: ['living-rooms', 'bedrooms', 'small-spaces'],
     steps: [
-      { number: '01', title: 'Layer Your Blacks', copy: 'Choose a primary shade—ink blue, deep forest green, burgundy, or charcoal—and take it across walls and trim. Shift the furniture one or two tones to keep the silhouettes legible.' },
+      { number: '01', title: 'Color-Drench the Architecture', copy: 'Choose a primary shade—ink blue, deep forest green, burgundy, or charcoal—and take it across walls and trim. Shift the furniture one or two tones to keep the silhouettes legible.' },
       { number: '02', title: 'Use Warm, Low Lighting', copy: 'Several lower light sources usually create more depth than one harsh ceiling fixture. Keep brightness close to the places where the room actually functions.' },
-      { number: '03', title: 'Mix Your Textures', copy: 'Combine stone, wood, textile, glass and metal. Matte and reflective surfaces beside each other keep a restrained palette from turning visually flat.' },
-      { number: '04', title: 'Choose Fewer, Larger Pieces', copy: 'Too many small objects create noise. A few well-scaled pieces make the composition feel more deliberate and give darker finishes room to register.' },
+      { number: '03', title: 'Mix Your Textures', copy: 'Put matte color-drenched walls beside velvet seating, smoked wood and one polished or honed stone surface. Photograph samples together in daylight and lamplight before committing.' },
+      { number: '04', title: 'Choose Fewer, Larger Pieces', copy: 'Choose a single focal point: a large atmospheric painting, sculptural chair, or dramatic fireplace. Keep adjacent shelves and tables sparse enough for the focal point to register.' },
       { number: '05', title: 'Bring In Natural Stone', copy: 'Stone introduces natural movement and variation without requiring bright color. Use it as an architectural surface or as one weighty object.' },
       { number: '06', title: 'Add Warm Contrast', copy: 'Warm wood, aged metal, pale stone or controlled warm light can break up black and charcoal without turning the room beige.' },
       { number: '07', title: 'Leave Negative Space', copy: 'Not every wall, shelf or corner needs to be filled. Empty space makes strong materials and objects feel more important.' },
@@ -185,7 +167,7 @@ export const guides: Guide[] = [
       { number: '01', title: 'Start With Ambient Light, Not a Bright Ceiling', copy: 'Start with dimmable ambient illumination bounced off a wall or ceiling, then test the finished effect after dark. The paint should retain its color rather than appearing flat gray.' },
       { number: '02', title: 'Add Task Light Where the Room Actually Works', copy: 'Reading chairs, desks, counters and bedside areas need focused light. Keeping task light local lets the rest of the room stay atmospheric instead of forcing the entire space brighter.', productId: 'lowes-pharmacy-lamp' },
       { number: '03', title: 'Use Accent Light to Reveal Material', copy: 'Aim light across stone, plaster, wood grain, artwork or textured textiles. Grazing light creates shadow and makes surfaces feel dimensional.' },
-      { number: '04', title: 'Keep Color Temperature Consistent', copy: 'Mixing very cool and very warm bulbs can make a dark room feel accidental. A consistent warm temperature usually keeps black, graphite and natural materials cohesive.' },
+      { number: '04', title: 'Keep Color Temperature Consistent', copy: 'Start by testing 2700K warm-white bulbs against your actual paint and velvet samples at night. Keep bulbs consistent within a sightline; use brighter, focused task lighting only where necessary.' },
       { number: '05', title: 'Let Some Areas Stay Dark', copy: 'A room does not need equal brightness everywhere. Controlled shadow is part of the composition. Light the surfaces and activities that matter, then let quieter zones recede.' },
     ],
     rule: 'Light for function first, material second and atmosphere third.',
@@ -197,12 +179,12 @@ export const guides: Guide[] = [
     deck: 'Use color-drenched architecture, velvet and matte bedding, and low-level light to build an enveloping but usable bedroom.',
     readTime: '3 min read',
     image: images.sterlingGreen,
-    imageAlt: 'Dark layered interior in black and charcoal with warm low lighting.',
+    imageAlt: 'Deep green interior inspiration for a richly layered, color-drenched bedroom palette.',
     relatedSpaces: ['bedrooms'],
     steps: [
       { number: '01', title: 'Use More Than One Dark Tone', copy: 'Carry storm blue, charcoal, or deep green onto the trim for a continuous backdrop, then contrast it with a headboard in another texture or shade.' },
-      { number: '02', title: 'Soften With Texture, Not Pastel Color', copy: 'Linen, wool, velvet, brushed cotton and matte wood can make a dark bedroom comfortable without turning it pale or overly soft.' },
-      { number: '03', title: 'Keep the Bed Visually Simple', copy: 'The bed is usually the largest object in the room. Too many patterns and competing details can make the space feel crowded.' },
+      { number: '02', title: 'Soften With Texture, Not Pastel Color', copy: 'Layer velvet or brushed cotton with breathable linen sheets and one textured throw. Keep patterns restrained if the headboard or wall molding is ornate.', productId: 'lowes-deep-green-velvet-drapes' },
+      { number: '03', title: 'Keep the Bed Visually Simple', copy: 'Choose whether the headboard, artwork, or wall paneling is the focal point. Use solid bedding beneath a dramatic headboard; reserve patterned bedding for simpler furniture.' },
       { number: '04', title: 'Use Low Light at More Than One Height', copy: 'Bedside lamps, sconces and a low floor lamp create a calmer rhythm than one ceiling fixture.' },
       { number: '05', title: 'Protect Negative Space', copy: 'Leave some wall, nightstand and floor area unfilled. Dark rooms feel more expensive when strong objects have space around them.' },
     ],
@@ -257,7 +239,7 @@ export const guides: Guide[] = [
       { number: '01', title: 'Separate the Work Surface From the Wall', copy: 'Against ink-blue or charcoal walls, introduce dark walnut or graphite at the desk to establish a clear work surface without breaking the room's palette.' },
       { number: '02', title: 'Prioritize Task Light Over Ambient Brightness', copy: 'Keep strong focused light at the desk and let the rest of the room stay darker.', productId: 'walmart-desk-lamp' },
       { number: '03', title: 'Use One Warm Material to Break the Field', copy: 'Wood grain, leather or cork can prevent graphite and black from feeling sterile without making the room rustic.' },
-      { number: '04', title: 'Keep Storage Visually Quiet', copy: 'Closed cabinetry, dark shelving and fewer visible objects keep the room focused.' },
+      { number: '04', title: 'Keep Storage Visually Quiet', copy: 'Hide cables and daily supplies in closed storage. Leave a small portion of shelves for a framed botanical print, dark ceramics, or carefully chosen books—not decorative filler.' },
       { number: '05', title: 'Protect One Empty Plane', copy: 'Leave one wall, corner or surface intentionally sparse so the room keeps a sense of width.' },
     ],
     rule: 'The office can be dark without being dim. Put brightness where the work happens and let the rest stay calm.',
@@ -274,7 +256,7 @@ export const guides: Guide[] = [
     steps: [
       { number: '01', title: 'Use Tonal Variation Instead of Bright Contrast', copy: 'Measure circulation and door swing first. Use a shallow console, slim upholstered chair or wall-mounted lamp instead of collecting small furniture pieces that crowd the floor.' },
       { number: '02', title: 'Choose Fewer Pieces With Cleaner Profiles', copy: 'Fewer, better-scaled pieces create fewer visual edges and usually make a compact room feel larger.' },
-      { number: '03', title: 'Use Reflection Strategically', copy: 'A mirror, glass surface or subtle sheen can bounce existing light deeper into the room.' },
+      { number: '03', title: 'Use Reflection Strategically', copy: 'Hang a framed mirror where it reflects a window, lamp, or an uncluttered sightline. Check the reflection from the doorway before drilling.' },
       { number: '04', title: 'Keep the Floor Line Visible', copy: 'Clear floor around furniture helps the eye understand the full footprint of the room.' },
       { number: '05', title: 'Light Vertical Surfaces', copy: 'Wall lighting or upward washes draw the eye vertically and make the room feel taller.' },
     ],
@@ -287,14 +269,14 @@ export const guides: Guide[] = [
     deck: 'A distinctive living room starts with a palette and one compelling anchor, not a collection of unrelated black furniture.',
     readTime: '3 min read',
     image: images.vesperRed,
-    imageAlt: 'Dark living room with layered black materials, natural stone and warm architectural light.',
+    imageAlt: 'Deep red interior inspiration for a richly colored living-room palette.',
     relatedSpaces: ['living-rooms'],
     steps: [
       { number: '01', title: 'Start With One Dominant Dark Tone', copy: 'Choose a defined palette: smoky blue and teal velvet, green-black and aged nickel, or burgundy and charcoal. Repeat the dominant color across architecture and one substantial upholstery piece.' },
-      { number: '02', title: 'Use One Large Anchor Instead of Many Small Pieces', copy: 'A substantial sofa, coffee table or artwork gives the room weight.' },
+      { number: '02', title: 'Use One Large Anchor Instead of Many Small Pieces', copy: 'Measure the sofa against the wall and rug first. Use one prominent secondary object—an oversized framed painting or dark stone table—rather than several competing statement pieces.' },
       { number: '03', title: 'Let Lighting Reveal the Room in Layers', copy: 'Combine a low floor lamp, table lamp, sconces or concealed light. Separate pools of light create depth.' },
       { number: '04', title: 'Mix Matte, Soft and Reflective Surfaces', copy: 'Velvet, brushed textile, honed stone, glass and metal should react differently to light.' },
-      { number: '05', title: 'Edit the Styling Hard', copy: 'Keep shelves, tables and corners selective so the strongest materials and shapes can register.' },
+      { number: '05', title: 'Edit the Styling Hard', copy: 'Group no more than a few pieces on the coffee table: a substantial book, a low dark vessel, or a sculptural object. Leave enough open tabletop for everyday use.' },
     ],
     rule: 'Expensive-looking dark rooms usually have fewer competing objects, better light and clearer material hierarchy.',
   },
@@ -311,7 +293,7 @@ export const guides: Guide[] = [
       { number: '01', title: 'Let the Stone Have Visible Movement', copy: 'Match a honed or veined stone sample beside your painted wall and dark timber in changing daylight; avoid competing dramatic stone patterns in a single view.' },
       { number: '02', title: 'Separate Materials by Sheen', copy: 'Matte walls, honed stone and brushed metal can live in the same color family while remaining distinct.' },
       { number: '03', title: 'Use Stone at Different Scales', copy: 'A large slab creates architectural weight while a smaller stone object can repeat the material quietly.' },
-      { number: '04', title: 'Warm the Composition With Light', copy: 'Warm white lighting can pull bronze, brown and mineral undertones from stone without adding orange decor.' },
+      { number: '04', title: 'Warm the Composition With Light', copy: 'Test warm-white directional lighting against the actual stone sample. Adjust angle until the veins show without creating glare on polished surfaces.' },
       { number: '05', title: 'Keep Surrounding Objects Quiet', copy: 'When stone is visually active, nearby furniture and accessories should be simpler.' },
     ],
     rule: 'Use black as the field and let natural variation become the detail.',
@@ -327,8 +309,16 @@ export const guides: Guide[] = [
     relatedSpaces: ['entryways'],
     steps: [
       { number: '01', title: 'Light the Vertical Surfaces', copy: 'Measure the walkway and door clearance before selecting a carved console or upholstered bench, then place a framed mirror where its reflection is worth seeing.' },
-      { number: '02', title: 'Use One Mirror With Purpose', copy: 'Place a mirror where it reflects light or extends a clean view rather than merely filling a wall.' },
-      { number: '03', title: 'Choose One Strong Console or Bench', copy: 'One well-scaled piece gives the entry a clear anchor and leaves enough open floor to breathe.' },
+      { number: '02', title: 'Use One Mirror With Purpose', copy: 'Position an antiqued or carved-frame mirror to catch a lamp or window, then check that it reflects something worth seeing rather than a coat rack or doorway clutter.' },
+      { number: '03', title: 'Choose One Strong Console or Bench', copy: 'Measure door swing and clear walking width before choosing a narrow dark-wood console or upholstered bench. A single substantial piece beats several tiny accent tables.' },
+      { number: '04', title: 'Use Stone or Metal for Visual Weight', copy: 'A dark stone top or blackened metal detail can make the entry feel finished without adding lots of color.' },
+      { number: '05', title: 'Control What Is Visible From the Door', copy: 'The first view should have one focal point and a clean line of sight.' },
+    ],
+    rule: 'The entry needs one clear focal point, enough light to read the materials and a clean path into the home.',
+  },
+];
+
+es the entry a clear anchor and leaves enough open floor to breathe.' },
       { number: '04', title: 'Use Stone or Metal for Visual Weight', copy: 'A dark stone top or blackened metal detail can make the entry feel finished without adding lots of color.' },
       { number: '05', title: 'Control What Is Visible From the Door', copy: 'The first view should have one focal point and a clean line of sight.' },
     ],

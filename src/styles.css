@@ -1674,3 +1674,21 @@ body{background:linear-gradient(145deg,#080d19 0%,#06070b 40%,#0b0b11 100%)}
 .palette-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; border-radius: 3px; }
 .palette-photo figcaption { padding: 12px 0 4px; font-size: 0.76rem; letter-spacing: 0.09em; text-transform: uppercase; opacity: 0.78; }
 @media (max-width: 620px) { .palette-photo-grid { grid-template-columns: 1fr; } }
+
+
+/* Palette-specific atmospheric backgrounds: restrained and scoped to collection pages. */
+body:has(.palette-theme-blue-sable) {
+  background: radial-gradient(ellipse at 70% 12%, rgba(33, 57, 99, .22), transparent 56%), #070b13;
+}
+body:has(.palette-theme-vesper-red) {
+  background: radial-gradient(ellipse at 70% 12%, rgba(100, 19, 46, .23), transparent 56%), #10080d;
+}
+body:has(.palette-theme-sterling-green) {
+  background: radial-gradient(ellipse at 70% 12%, rgba(21, 77, 61, .22), transparent 56%), #07100e;
+}
+body:has(.palette-theme-noir-elegance) {
+  background: radial-gradient(ellipse at 70% 12%, rgba(83, 79, 86, .11), transparent 56%), #09090b;
+}
+body:has(.palette-theme-duskworn) {
+  background: radial-gradient(ellipse at 70% 12%, rgba(85, 75, 90, .17), transparent 56%), #0d0c11;
+}

@@ -455,6 +455,18 @@ function SpacePage() {
         )}
       </section>
 
+      {space.slug === 'bathrooms' && (
+        <section className="content-section">
+          <SectionTitle index="BATHROOMS / MORE INSPIRATION" title="SAPPHIRE LUXE." copy="A second bathroom direction from the Afterdark Dwellings collection." />
+          <div className="palette-photo-grid">
+            <figure className="palette-photo">
+              <img src="/Sapphire%20Luxe%20Bathroom.PNG" alt="Sapphire Luxe bathroom inspiration" loading="lazy" />
+              <figcaption>Sapphire Luxe Bathroom</figcaption>
+            </figure>
+          </div>
+        </section>
+      )}
+
       {space.slug === 'bedrooms' && (
         <section className="content-section noir-elegance-collection">
           <SectionTitle index="BLUE SABLE / BEDROOMS" title="MIDNIGHT BLUE DETAILS" copy="Additional bedroom inspiration from the Blue Sable collection." />
@@ -677,7 +689,7 @@ function ShopTheLookPage() {
     {
       name: 'Jade Kitchen',
       label: 'LOOK 02 / KITCHEN',
-      image: images.blackStone,
+      image: '/Jade%20Kitchen.PNG',
       productIds: ['bedbath-beatrix-black-velvet-stool'],
       spaceSlug: 'kitchens',
     },

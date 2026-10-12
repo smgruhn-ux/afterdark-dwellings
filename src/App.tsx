@@ -488,41 +488,42 @@ function SpacePage() {
 }
 
 function CuratedFindsPage() {
-  const categories = ['Lighting', 'Furniture', 'Mirrors', 'Stone + Material', 'Textiles', 'Storage', 'Kitchen', 'Bath', 'Objects'];
+  const selections = [
+    { id: 'curated-onyx-sconce', image: '/Jade%20Kitchen.PNG', mood: 'MATERIAL / SHADOW', title: 'Stone & Shadow' },
+    { id: 'curated-black-arched-mirror', image: '/51-teal-velvet-bedroom.jpg', mood: 'FORM / REFLECTION', title: 'The Quiet Arch' },
+    { id: 'curated-black-velvet-drapes', image: '/38-tonal-blue-velvet-sectional.jpg', mood: 'TEXTURE / DEPTH', title: 'Velvet After Dark' },
+    { id: 'curated-wayton-sconce', image: '/50-teal-velvet-living-v3.jpg', mood: 'LIGHT / ARCHITECTURE', title: 'The Black Silhouette' },
+    { id: 'curated-evensong-sconce', image: '/Emerald%20Noir%20bathroom.PNG', mood: 'LIGHT / SOFT CONTRAST', title: 'A Softer Glow' },
+  ];
 
   return (
     <>
-      <SEO title="Curated Finds | Afterdark Dwellings" description="Verified lighting, furniture, mirrors, objects and home upgrades selected for dark modern interiors by Afterdark Dwellings." />
-      <PageHero kicker="VERIFIED RETAILER LINKS" title="REAL FINDS. SELECTED AFTERDARK." copy="No invented inventory, fake prices, or filler listings. Each live recommendation corresponds to a real retailer destination." />
-      <section className="content-section">
-        <div className="finds-intro">
-          <p>Curated Finds is organized by use, not by whatever happens to be trending. Live product cards are verified against real merchant destinations. Empty categories stay visibly empty until there is something worth adding.</p>
+      <SEO title="Curated Finds | Afterdark Dwellings" description="A small, intentional edit of lighting, mirrors, and textiles for darker interiors." />
+      <PageHero kicker="THE AFTERDARK EDIT" title="CURATED FINDS" copy="Fewer objects. Better choices. Pieces selected for their material, silhouette, and place in a dark interior." />
+      <section className="content-section curated-editorial">
+        <div className="curated-editorial-intro">
+          <span className="eyebrow">AN EDIT, NOT A CATALOG</span>
+          <p>Five considered finds, each paired with a room mood from our own collections. The photographs are interior inspiration, not pictures of the products themselves.</p>
         </div>
-        <nav className="finds-nav" aria-label="Curated Finds categories">
-          {categories.map((category) => (
-            <a key={category} href={`#finds-${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}>{category}</a>
-          ))}
-        </nav>
-        {categories.map((category) => {
-          const categoryProducts = products.filter((product) => product.category === category);
-          return (
-            <div className="category-block" id={`finds-${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} key={category}>
-              <SectionTitle index={category.toUpperCase()} title={category.toUpperCase()} />
-              {categoryProducts.length > 0 ? (
-                <div className="product-grid">
-                  {categoryProducts.map((product) => (
-                    <ProductLink product={product} key={product.id} />
-                  ))}
+        <div className="curated-editorial-grid">
+          {selections.map((selection, index) => {
+            const product = getProduct(selection.id);
+            if (!product) return null;
+            return (
+              <article className="curated-editorial-card" key={selection.id}>
+                <img src={selection.image} alt={`${selection.title} — Afterdark Dwellings room inspiration, not a product photograph`} loading="lazy" />
+                <div className="curated-editorial-copy">
+                  <span className="eyebrow">{String(index + 1).padStart(2, '0')} / {selection.mood}</span>
+                  <h2>{selection.title}</h2>
+                  <h3>{product.name}</h3>
+                  <p>{product.editorialNote}</p>
+                  <a href={product.destinationUrl} target="_blank" rel="nofollow noreferrer">View piece at {product.merchant} ↗</a>
                 </div>
-              ) : (
-                <ComingSoon>No verified {category.toLowerCase()} recommendation has been added yet.</ComingSoon>
-              )}
-            </div>
-          );
-        })}
-        <p className="disclosure wide">
-          Retailer links on this page are provided for product discovery. If an affiliate relationship is activated and a tracked link is added, the relevant disclosure will be shown. Merchant pricing, stock, shipping, returns and warranty terms can change.
-        </p>
+              </article>
+            );
+          })}
+        </div>
+        <p className="disclosure wide">Independent editorial selections. Images illustrate the mood, not the exact retail products. Links go to retailer product pages; prices, stock, and shipping may change. No affiliate tracking is attached to these links.</p>
       </section>
     </>
   );

@@ -587,10 +587,10 @@ function PaletteCollectionPage({ collection }: { collection: PaletteCollection }
   return (
     <>
       <SEO title={`${palette.title} | Afterdark Dwellings`} description={palette.description} />
-      <section className="content-section noir-elegance-collection">
+      <section className={`content-section noir-elegance-collection palette-theme-${collection}`}>
         <div className="noir-collection-heading">
           <span className="eyebrow">THE PALETTE / {palette.title}</span>
-          <h1>{palette.title}.</h1>
+          <h1>{palette.title}</h1>
           <p>{palette.description}</p>
         </div>
         <div className="palette-photo-grid">
@@ -646,10 +646,10 @@ function NoirElegancePage() {
   return (
     <>
       <SEO title="Noir Elegance | Afterdark Dwellings" description="Three richly detailed Noir Elegance interior scenes with carefully chosen ways to recreate the atmosphere." />
-      <section className="content-section noir-elegance-collection">
+      <section className="content-section noir-elegance-collection palette-theme-noir-elegance">
         <div className="noir-collection-heading">
           <span className="eyebrow">THE PALETTE / NOIR ELEGANCE</span>
-          <h1>NOIR ELEGANCE.</h1>
+          <h1>NOIR ELEGANCE</h1>
           <p>Dark velvet, ornate details, and sculptural contrast. Three distinct compositions, each with a considered starting point for bringing the atmosphere home.</p>
         </div>
         <div className="noir-scene-list">

@@ -7,7 +7,7 @@ export const site = {
 
 export const images = {
   main: '/afterdark-images/dark-blue-parlor.webp',
-  bathroom: '/afterdark-images/gothic-blue-mirror.webp',
+  bathroom: '/Emerald%20Noir%20bathroom.PNG',
   office: '/afterdark-images/muted-gray-sable.webp',
   smallSpace: '/afterdark-images/blue-sable-alt.webp',
   blackStone: '/afterdark-images/noir-elegance.webp',
@@ -19,7 +19,7 @@ export const images = {
   noirElegance: '/afterdark-images/dark-noir-elegance-raven-sage-velvet.JPG',
   duskworn: '/afterdark-images/Duskworn - alt.PNG',
   darkEntryways: '/afterdark-images/dark-entryways.webp',
-  darkBathrooms: '/afterdark-images/gothic-blue-mirror.webp',
+  darkBathrooms: '/Sapphire%20Luxe%20Bathroom.PNG',
   gothicBlueMirror: '/afterdark-images/gothic-blue-mirror.webp',
   darkBlueParlor: '/afterdark-images/dark-blue-parlor.webp',
 };
@@ -227,8 +227,8 @@ export const guides: Guide[] = [
     title: 'How to Make a Dark Bedroom Feel Calm, Not Heavy',
     deck: 'Use color-drenched architecture, velvet and matte bedding, and low-level light to build an enveloping but usable bedroom.',
     readTime: '3 min read',
-    image: images.office,
-    imageAlt: 'Muted gray and blue-sable living room with subdued velvet seating and a sculptural dark stone table.',
+    image: images.main,
+    imageAlt: 'Dark layered interior in blue and charcoal tones.',
     relatedSpaces: ['bedrooms'],
     steps: [
       { number: '01', title: 'Use More Than One Dark Tone', copy: 'Carry storm blue, charcoal, or deep green onto the trim for a continuous backdrop, then contrast it with a headboard in another texture or shade.' },
@@ -356,8 +356,8 @@ export const spaces: Space[] = [
     name: 'Kitchens',
     kicker: 'Finish / Grain / Stone',
     intro: 'Black kitchens stay dimensional when stone, grain, metal and task light create the contrast instead of more color.',
-    image: images.blackStone,
-    imageAlt: 'Dark kitchen inspiration pending the newly uploaded Jade Kitchen photograph.',
+    image: '/Jade%20Kitchen.PNG',
+    imageAlt: 'Jade Kitchen with saturated green cabinetry and dark contrasting finishes.',
     guideSlugs: ['layered-lighting-for-dark-interiors'],
     productCategories: ['Lighting', 'Kitchen', 'Storage', 'Objects'],
     pinterestBoard: 'https://www.pinterest.com/afterdarkdwellings_/dark-kitchens/',
@@ -368,7 +368,7 @@ export const spaces: Space[] = [
     kicker: 'Stone / Mirror / Metal',
     intro: 'Treat stone, reflection, hardware and face-level lighting as one composition, especially in smaller rooms.',
     image: images.bathroom,
-    imageAlt: 'Dark bathroom with black stone, mirror lighting and refined metal details.',
+    imageAlt: 'Emerald Noir bathroom interior with dark green finishes and considered bathroom fixtures.',
     guideSlugs: ['dark-bathroom-that-feels-expensive', 'layered-lighting-for-dark-interiors'],
     productCategories: ['Lighting', 'Mirrors', 'Bath', 'Objects'],
     pinterestBoard: 'https://www.pinterest.com/afterdarkdwellings_/dark-bathrooms/',

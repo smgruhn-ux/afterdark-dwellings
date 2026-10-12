@@ -680,10 +680,10 @@ function NoirElegancePage() {
 function ShopTheLookPage() {
   const looks = [
     {
-      name: 'Black Stone Living Room',
+      name: 'Teal Velvet Living Room',
       label: 'LOOK 01 / LIVING ROOM',
-      image: images.blackStone,
-      productIds: ['walmart-arc-floor-lamp', 'walmart-end-table', 'walmart-metal-tray', 'walmart-organic-mirror'],
+      image: '/50-teal-velvet-living-v3.jpg',
+      productIds: ['walmart-modway-valour-teal-sofa', 'walmart-fnova-black-coffee-table', 'lowes-doresshop-black-sconces'],
       spaceSlug: 'living-rooms',
     },
     {

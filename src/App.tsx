@@ -556,6 +556,10 @@ const paletteCollections: Record<PaletteCollection, { title: string; description
       { src: '/51-teal-velvet-bedroom.jpg', label: 'Teal Velvet Bedroom' },
       { src: '/52-teal-parlor-chesterfield.jpg', label: 'Teal Parlor Chesterfield' },
       { src: '/sterling-green.webp', label: 'Sterling Green' },
+      { src: '/IMG_9997.JPG', label: 'Sterling Green — Editorial 01' },
+      { src: '/IMG_9987.JPG', label: 'Sterling Green — Editorial 02' },
+      { src: '/B4D22CCF-B5F1-4FE1-B5FC-5D6C74266DA1.PNG', label: 'Sterling Green — Editorial 03' },
+      { src: '/IMG_9988.JPG', label: 'Sterling Green — Editorial 04' },
     ],
   },
   duskworn: {

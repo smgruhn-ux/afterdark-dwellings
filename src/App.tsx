@@ -221,7 +221,7 @@ function HomePage() {
   const latest = guides.slice(0, 4);
   const collections = [
     { name: 'Blue Sable', tone: 'sable', note: 'Inky blues / velvet / cool shadow', image: '/38-tonal-blue-velvet-sectional.jpg', link: '/collections/blue-sable' },
-    { name: 'Vesper Red', tone: 'vesper', note: 'Red velvet / black accents / rich contrast', image: images.vesperRed, link: '/spaces/living-rooms' },
+    { name: 'Vesper Red', tone: 'vesper', note: 'Red velvet / black accents / rich contrast', image: images.vesperRed, link: '/collections/vesper-red' },
     { name: 'Sterling Green', tone: 'sterling', note: 'Deep green / architectural detail / soft light', image: '/50-teal-velvet-living-v3.jpg', link: '/collections/sterling-green' },
     { name: 'Noir Elegance', tone: 'noir', note: 'Black & ivory / ornate detail / candlelit', image: images.noirElegance, link: '/collections/noir-elegance' },
     { name: 'Duskworn', tone: 'duskworn', note: 'Smoky patina / storm shades / aged surfaces', image: '/Duskworn.PNG', link: '/collections/duskworn' },
@@ -516,7 +516,7 @@ function CuratedFindsPage() {
   );
 }
 
-type PaletteCollection = 'blue-sable' | 'sterling-green' | 'duskworn';
+type PaletteCollection = 'blue-sable' | 'vesper-red' | 'sterling-green' | 'duskworn';
 const paletteCollections: Record<PaletteCollection, { title: string; description: string; photos: { src: string; label: string }[] }> = {
   'blue-sable': {
     title: 'BLUE SABLE', description: 'Inky navy, slate velvet, and tonal blue rooms with architectural depth.',
@@ -538,6 +538,15 @@ const paletteCollections: Record<PaletteCollection, { title: string; description
       { src: '/IMG_9989.JPG', label: 'Blue Sable — Editorial 07' },
       { src: '/IMG_9990.JPG', label: 'Blue Sable — Editorial 08' },
       { src: '/IMG_9993.JPG', label: 'Blue Sable — Editorial 09' },
+    ],
+  },
+  'vesper-red': {
+    title: 'VESPER RED', description: 'Oxblood, crimson, blackened burgundy, and richly layered interiors.',
+    photos: [
+      { src: '/afterdark-images/vesper-red.webp', label: 'Vesper Red — Original Collection' },
+      { src: '/IMG_9981.JPG', label: 'Vesper Red — Editorial 01' },
+      { src: '/A%20stunning%20and%20vibrant%20cinematic%20photo%20of%20It%E2%80%99s%20a%20striking%20combination%20of%20monochromatic%20crimson%20interiors%2C%20gothic%20architectural%20detailing%2C%20and%20restrained%20contemporary%20furniture.__The%20aesthetic___%20Color_%20Deep%20oxblood%2C%20blackened%20burgundy%2C%20wine%20red%2C%20and.PNG', label: 'Vesper Red — Editorial 02' },
+      { src: '/IMG_9992.JPG', label: 'Vesper Red — Editorial 03' },
     ],
   },
   'sterling-green': {
@@ -924,6 +933,7 @@ export default function App() {
         <Route path="/curated-finds" element={<CuratedFindsPage />} />
         <Route path="/shop-the-look" element={<ShopTheLookPage />} />
         <Route path="/collections/blue-sable" element={<PaletteCollectionPage collection="blue-sable" />} />
+        <Route path="/collections/vesper-red" element={<PaletteCollectionPage collection="vesper-red" />} />
         <Route path="/collections/sterling-green" element={<PaletteCollectionPage collection="sterling-green" />} />
         <Route path="/collections/duskworn" element={<PaletteCollectionPage collection="duskworn" />} />
         <Route path="/collections/noir-elegance" element={<NoirElegancePage />} />

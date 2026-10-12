@@ -38,6 +38,37 @@ export type Product = {
 
 export const products: Product[] = [
   {
+    id: 'walmart-modway-valour-teal-sofa',
+    name: 'Modway Valour Performance Velvet Sofa — Teal',
+    merchant: 'Walmart',
+    category: 'Furniture',
+    editorialNote: 'A saturated teal velvet sofa that recreates the rich jewel-toned seating direction. A comparable piece, not an exact photographic match.',
+    destinationUrl: 'https://www.walmart.com/ip/293031253',
+    verified: true,
+    relatedSpaces: ['living-rooms'],
+  },
+  {
+    id: 'walmart-fnova-black-coffee-table',
+    name: 'Fnova Two-Tier Round Coffee Table — Black',
+    merchant: 'Walmart',
+    category: 'Furniture',
+    editorialNote: 'A grounded black coffee table to contrast with teal velvet upholstery while keeping the living-room composition restrained.',
+    destinationUrl: 'https://www.walmart.com/ip/20421914046',
+    verified: true,
+    relatedSpaces: ['living-rooms'],
+  },
+  {
+    id: 'lowes-doresshop-black-sconces',
+    name: 'DORESshop Matte Black Wall Sconces — Set of Two',
+    merchant: "Lowe's",
+    category: 'Lighting',
+    editorialNote: 'A pair of black metal wall lights to add layered illumination against a dark backdrop. Check dimensions and wiring requirements.',
+    destinationUrl: 'https://www.lowes.com/pd/DORESshop-15-3-in-1-Light-Black-Metal-Modern-Wall-Sconce-with-Clear-Glass-Shade-for-Living-Room-Bedroom-or-Entryway-E26-Base-Bulbs-Not-Included-2-Pack/8629786',
+    verified: true,
+    relatedSpaces: ['living-rooms'],
+  },
+
+  {
     id: 'lowes-veda-black-bath-faucet',
     name: 'allen + roth Veda Matte Black Single-Hole Bathroom Faucet',
     merchant: "Lowe's",

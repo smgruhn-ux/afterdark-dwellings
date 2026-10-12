@@ -490,7 +490,6 @@ function SpacePage() {
 function CuratedFindsPage() {
   const selections = [
     { id: 'curated-onyx-sconce', image: '/Jade%20Kitchen.PNG', mood: 'MATERIAL / SHADOW', title: 'Stone & Shadow' },
-    { id: 'curated-black-arched-mirror', image: '/51-teal-velvet-bedroom.jpg', mood: 'FORM / REFLECTION', title: 'The Quiet Arch' },
     { id: 'curated-black-velvet-drapes', image: '/38-tonal-blue-velvet-sectional.jpg', mood: 'TEXTURE / DEPTH', title: 'Velvet After Dark' },
     { id: 'curated-wayton-sconce', image: '/50-teal-velvet-living-v3.jpg', mood: 'LIGHT / ARCHITECTURE', title: 'The Black Silhouette' },
     { id: 'curated-evensong-sconce', image: '/Emerald%20Noir%20bathroom.PNG', mood: 'LIGHT / SOFT CONTRAST', title: 'A Softer Glow' },
@@ -503,7 +502,7 @@ function CuratedFindsPage() {
       <section className="content-section curated-editorial">
         <div className="curated-editorial-intro">
           <span className="eyebrow">AN EDIT, NOT A CATALOG</span>
-          <p>Five considered finds, each paired with a room mood from our own collections. The photographs are interior inspiration, not pictures of the products themselves.</p>
+          <p>Four considered finds, each paired with a room mood from our own collections. The photographs are interior inspiration, not pictures of the products themselves.</p>
         </div>
         <div className="curated-editorial-grid">
           {selections.map((selection, index) => {

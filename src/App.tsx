@@ -455,6 +455,16 @@ function SpacePage() {
         )}
       </section>
 
+      {space.slug === 'bedrooms' && (
+        <section className="content-section noir-elegance-collection">
+          <SectionTitle index="BLUE SABLE / BEDROOMS" title="MIDNIGHT BLUE DETAILS" copy="Additional bedroom inspiration from the Blue Sable collection." />
+          <div className="palette-photo-grid">
+            <figure className="palette-photo"><img src="/BEDROOMS%20%E2%80%94%20Quiet%20_%20Tactile%20_%20Low%20Light_An%20intimate%20midnight-blue%20bedroom%20featuring%20textured%20bedding%2C%20layered%20fabrics%2C%20subtle%20botanical%20details%2C%20and%20multiple%20soft%2C%20low-positioned%20light%20sources.%20Restful%2C%20enveloping%2C%20and%20visually%20rich%20without%20excess%202.JPEG" alt="Midnight blue bedroom inspiration 1" loading="lazy" /><figcaption>Midnight Blue Bedroom 1</figcaption></figure>
+            <figure className="palette-photo"><img src="/BEDROOMS%20%E2%80%94%20Quiet%20_%20Tactile%20_%20Low%20Light_An%20intimate%20midnight-blue%20bedroom%20featuring%20textured%20bedding%2C%20layered%20fabrics%2C%20subtle%20botanical%20details%2C%20and%20multiple%20soft%2C%20low-positioned%20light%20sources.%20Restful%2C%20enveloping%2C%20and%20visually%20rich%20without%20excessiv.JPEG" alt="Midnight blue bedroom inspiration 2" loading="lazy" /><figcaption>Midnight Blue Bedroom 2</figcaption></figure>
+          </div>
+        </section>
+      )}
+
       <section className="pinterest-band">
         <span className="eyebrow">03 / PINTEREST</span>
         <h2>{space.name}, saved.</h2>
@@ -517,6 +527,17 @@ const paletteCollections: Record<PaletteCollection, { title: string; description
       { src: '/46-cobalt-bay-window.jpg', label: 'Cobalt Bay Window' },
       { src: '/47-slate-velvet-sofa-molding.jpg', label: 'Slate Velvet Sofa & Molding' },
       { src: '/48-navy-entry-velvet-bench.jpg', label: 'Navy Entry Velvet Bench' },
+      { src: '/BEDROOMS%20%E2%80%94%20Quiet%20_%20Tactile%20_%20Low%20Light_An%20intimate%20midnight-blue%20bedroom%20featuring%20textured%20bedding%2C%20layered%20fabrics%2C%20subtle%20botanical%20details%2C%20and%20multiple%20soft%2C%20low-positioned%20light%20sources.%20Restful%2C%20enveloping%2C%20and%20visually%20rich%20without%20excess%202.JPEG', label: 'Midnight Blue Bedroom — 1' },
+      { src: '/BEDROOMS%20%E2%80%94%20Quiet%20_%20Tactile%20_%20Low%20Light_An%20intimate%20midnight-blue%20bedroom%20featuring%20textured%20bedding%2C%20layered%20fabrics%2C%20subtle%20botanical%20details%2C%20and%20multiple%20soft%2C%20low-positioned%20light%20sources.%20Restful%2C%20enveloping%2C%20and%20visually%20rich%20without%20excessiv.JPEG', label: 'Midnight Blue Bedroom — 2' },
+      { src: '/5E615937-888C-4F9B-AC67-906D1E08B3DE.PNG', label: 'Blue Sable — Editorial 01' },
+      { src: '/FDA9E35D-BE96-4C25-900C-D8E08AD0914D.PNG', label: 'Blue Sable — Editorial 02' },
+      { src: '/IMG_9948.JPG', label: 'Blue Sable — Editorial 03' },
+      { src: '/IMG_9979.JPG', label: 'Blue Sable — Editorial 04' },
+      { src: '/IMG_9980.JPG', label: 'Blue Sable — Editorial 05' },
+      { src: '/IMG_9983.JPG', label: 'Blue Sable — Editorial 06' },
+      { src: '/IMG_9989.JPG', label: 'Blue Sable — Editorial 07' },
+      { src: '/IMG_9990.JPG', label: 'Blue Sable — Editorial 08' },
+      { src: '/IMG_9993.JPG', label: 'Blue Sable — Editorial 09' },
     ],
   },
   'sterling-green': {

@@ -258,8 +258,8 @@ export const guides: Guide[] = [
     title: 'How to Make a Dark Bedroom Feel Calm, Not Heavy',
     deck: 'Use color-drenched architecture, velvet and matte bedding, and low-level light to build an enveloping but usable bedroom.',
     readTime: '3 min read',
-    image: '/57-noir-bedroom-wings-v2.jpg',
-    imageAlt: 'Dark noir bedroom with layered furnishings and a moody atmosphere.',
+    image: '/BEDROOMS%20%E2%80%94%20Quiet%20_%20Tactile%20_%20Low%20Light_An%20intimate%20midnight-blue%20bedroom%20featuring%20textured%20bedding%2C%20layered%20fabrics%2C%20subtle%20botanical%20details%2C%20and%20multiple%20soft%2C%20low-positioned%20light%20sources.%20Restful%2C%20enveloping%2C%20and%20visually%20rich%20without%20excess%202.JPEG',
+    imageAlt: 'Midnight-blue bedroom with layered bedding, tactile fabrics and low-positioned lighting.',
     relatedSpaces: ['bedrooms'],
     steps: [
       { number: '01', title: 'Use More Than One Dark Tone', copy: 'Carry storm blue, charcoal, or deep green onto the trim for a continuous backdrop, then contrast it with a headboard in another texture or shade.' },

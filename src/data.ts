@@ -27,7 +27,7 @@ export const images = {
 export type Product = {
   id: string;
   name: string;
-  merchant: 'Walmart' | "Lowe's";
+  merchant: 'Walmart' | "Lowe's" | 'Bed Bath & Beyond' | 'Etsy';
   category: string;
   editorialNote: string;
   destinationUrl: string;
@@ -37,6 +37,27 @@ export type Product = {
 };
 
 export const products: Product[] = [
+  {
+    id: 'lowes-veda-black-bath-faucet',
+    name: 'allen + roth Veda Matte Black Single-Hole Bathroom Faucet',
+    merchant: "Lowe's",
+    category: 'Bath',
+    editorialNote: 'A restrained matte-black faucet suited to the Emerald Noir and Sapphire Luxe bathroom palettes. Confirm sink-hole compatibility before ordering.',
+    destinationUrl: 'https://www.lowes.com/pd/Origin-21-Veda-Matte-Black-Single-Hole-1-Handle-WaterSense-Handle-Bathroom-Sink-Faucet-with-Drain-and-Deck-Plate/5001845641',
+    verified: true,
+    relatedSpaces: ['bathrooms'],
+  },
+  {
+    id: 'bedbath-beatrix-black-velvet-stool',
+    name: 'Beatrix Pleated Velvet Counter Stool — Black',
+    merchant: 'Bed Bath & Beyond',
+    category: 'Furniture',
+    editorialNote: 'A velvet counter-height seating option for the Jade Kitchen palette. Compare the stool silhouette and measurements against your own island before ordering.',
+    destinationUrl: 'https://www.bedbathandbeyond.com/Home-Garden/Beatrix-Pleated-Light-Grey-Velvet-Counter-Stool-N-A/29139867/product.html?option=60068455',
+    verified: true,
+    relatedSpaces: ['kitchens'],
+  },
+
   {
     id: 'walmart-wall-sconce',
     name: 'Better Homes & Gardens Matte Black 1-Light Indoor Wall Sconce',
@@ -336,7 +357,7 @@ export const spaces: Space[] = [
     kicker: 'Finish / Grain / Stone',
     intro: 'Black kitchens stay dimensional when stone, grain, metal and task light create the contrast instead of more color.',
     image: images.blackStone,
-    imageAlt: 'Black and stone interior with dark surfaces and warm architectural lighting.',
+    imageAlt: 'Dark kitchen inspiration pending the newly uploaded Jade Kitchen photograph.',
     guideSlugs: ['layered-lighting-for-dark-interiors'],
     productCategories: ['Lighting', 'Kitchen', 'Storage', 'Objects'],
     pinterestBoard: 'https://www.pinterest.com/afterdarkdwellings_/dark-kitchens/',
@@ -351,28 +372,6 @@ export const spaces: Space[] = [
     guideSlugs: ['dark-bathroom-that-feels-expensive', 'layered-lighting-for-dark-interiors'],
     productCategories: ['Lighting', 'Mirrors', 'Bath', 'Objects'],
     pinterestBoard: 'https://www.pinterest.com/afterdarkdwellings_/dark-bathrooms/',
-  },
-  {
-    slug: 'home-offices',
-    name: 'Home Offices',
-    kicker: 'Focus / Task Light / Quiet Storage',
-    intro: 'Keep light where the work happens, storage visually quiet and one empty plane protected so darker finishes do not close in.',
-    image: images.office,
-    imageAlt: 'Dark home office with black wood and focused task lighting.',
-    guideSlugs: ['layered-lighting-for-dark-interiors'],
-    productCategories: ['Lighting', 'Furniture', 'Storage'],
-    pinterestBoard: 'https://www.pinterest.com/afterdarkdwellings_/dark-home-offices/',
-  },
-  {
-    slug: 'entryways',
-    name: 'Entryways',
-    kicker: 'Sightline / Reflection / Weight',
-    intro: 'Control the first view with vertical light, one reflective surface and a single strong anchor instead of a crowded collection.',
-    image: images.entryway,
-    imageAlt: 'Dark entryway with warm wall light, black stone and a clear sightline.',
-    guideSlugs: ['dark-entryway-lighting-mirrors-contrast', 'layered-lighting-for-dark-interiors'],
-    productCategories: ['Lighting', 'Mirrors', 'Furniture', 'Objects'],
-    pinterestBoard: 'https://www.pinterest.com/afterdarkdwellings_/dark-entryways/',
   },
   {
     slug: 'small-spaces',

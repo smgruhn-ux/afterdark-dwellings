@@ -271,7 +271,7 @@ function HomePage() {
         <Link className="text-link" to="/guides">Read the design guides →</Link>
       </section>
       <section className="content-section editorial-rooms">
-        <SectionTitle index="02 / ROOM BY ROOM" title="FIND YOUR SPACE." copy="From dramatic entryways to richly layered bedrooms, start with a room you can actually transform." />
+        <SectionTitle index="02 / ROOM BY ROOM" title="FIND YOUR SPACE." copy="From richly layered bedrooms to atmospheric bathrooms, start with a room you can actually transform." />
         <div className="space-grid">
           {spaces.map((space) => (
             <Link className="space-card" to={`/spaces/${space.slug}`} key={space.slug}>
@@ -397,7 +397,7 @@ function GuideArticlePage() {
 function SpacesPage() {
   return (
     <>
-      <SEO title="Explore Rooms | Afterdark Dwellings" description="Explore Afterdark Dwellings by room: dark living rooms, bedrooms, kitchens, bathrooms, home offices, entryways, and small spaces." />
+      <SEO title="Explore Rooms | Afterdark Dwellings" description="Explore Afterdark Dwellings by room: dark living rooms, bedrooms, kitchens, bathrooms, and small spaces." />
       <PageHero kicker="ROOM BY ROOM" title="SPACES WITH A POINT OF VIEW." copy="Choose the room first. Each space connects practical design guidance, product categories, and the relevant Pinterest board." />
       <section className="content-section">
         <div className="space-grid large">
@@ -675,18 +675,18 @@ function ShopTheLookPage() {
       spaceSlug: 'living-rooms',
     },
     {
-      name: 'Afterdark Entry',
-      label: 'LOOK 02 / ENTRYWAY',
-      image: images.entryway,
-      productIds: ['lowes-up-down-sconce', 'walmart-organic-mirror', 'walmart-metal-tray'],
-      spaceSlug: 'entryways',
+      name: 'Jade Kitchen',
+      label: 'LOOK 02 / KITCHEN',
+      image: images.blackStone,
+      productIds: ['bedbath-beatrix-black-velvet-stool'],
+      spaceSlug: 'kitchens',
     },
     {
-      name: 'Focused Home Office',
-      label: 'LOOK 03 / OFFICE',
-      image: images.office,
-      productIds: ['walmart-desk-lamp', 'lowes-pharmacy-lamp'],
-      spaceSlug: 'home-offices',
+      name: 'Emerald Noir Bathroom',
+      label: 'LOOK 03 / BATHROOM',
+      image: images.bathroom,
+      productIds: ['lowes-veda-black-bath-faucet'],
+      spaceSlug: 'bathrooms',
     },
   ];
 

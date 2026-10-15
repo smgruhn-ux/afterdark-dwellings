@@ -601,7 +601,6 @@ function NoirElegancePage() {
       image: '/57-noir-bedroom-wings-v2.jpg',
       alt: 'Noir Elegance bedroom composition with ornate, wing-inspired details.',
       description: 'Build the atmosphere with a dark foundation, tactile bedding, and precisely placed low lighting. Let one sculptural feature take the lead.',
-      links: [],
     },
     {
       title: 'The Raven Console',
@@ -609,7 +608,6 @@ function NoirElegancePage() {
       image: '/58-noir-console-raven.jpg',
       alt: 'Ornate Noir Elegance console scene with raven-inspired detailing.',
       description: 'Treat the console like a still life: a strong focal object, restrained accessories, and enough empty surface to frame the silhouette.',
-      links: [],
     },
     {
       title: 'The Filigree Corner',
@@ -617,7 +615,6 @@ function NoirElegancePage() {
       image: '/61-noir-chaise-corner-filigree.jpg',
       alt: 'Moody Noir Elegance chaise lounge corner with decorative filigree.',
       description: 'Anchor a quiet corner with black velvet seating. Keep surrounding objects secondary so the chair and architectural detail remain the focus.',
-      links: [],
     },
   ];
 
@@ -638,13 +635,7 @@ function NoirElegancePage() {
                 <span className="eyebrow">{scene.label}</span>
                 <h2>{scene.title}</h2>
                 <p>{scene.description}</p>
-                <div className="noir-scene-links">
-                  {scene.links.map((link) => (
-                    <a key={link.href} href={link.href} target="_blank" rel="nofollow noreferrer">
-                      {link.text} ↗
-                    </a>
-                  ))}
-                </div>
+
               </div>
             </article>
           ))}
@@ -667,21 +658,18 @@ function ShopTheLookPage() {
       name: 'Teal Velvet Living Room',
       label: 'LOOK 01 / LIVING ROOM',
       image: '/50-teal-velvet-living-v3.jpg',
-      productIds: ['walmart-modway-valour-teal-sofa', 'walmart-fnova-black-coffee-table', 'lowes-doresshop-black-sconces'],
       spaceSlug: 'living-rooms',
     },
     {
       name: 'Jade Kitchen',
       label: 'LOOK 02 / KITCHEN',
       image: '/Jade%20Kitchen.PNG',
-      productIds: ['bedbath-beatrix-black-velvet-stool'],
       spaceSlug: 'kitchens',
     },
     {
       name: 'Emerald Noir Bathroom',
       label: 'LOOK 03 / BATHROOM',
       image: images.bathroom,
-      productIds: ['lowes-veda-black-bath-faucet'],
       spaceSlug: 'bathrooms',
     },
   ];
@@ -702,24 +690,7 @@ function ShopTheLookPage() {
               <span className="eyebrow">{look.label}</span>
               <h2>{look.name}</h2>
               <Link className="look-room-link" to={`/spaces/${look.spaceSlug}`}>Read the room guide →</Link>
-              <div className="look-products">
-                {look.productIds.map((id, index) => {
-                  const product = getProduct(id);
-                  if (!product) return null;
-                  return (
-                    <div className="look-product" key={id}>
-                      <span>{String(index + 1).padStart(2, '0')}</span>
-                      <div>
-                        <h3>{product.name}</h3>
-                        <p>{product.merchant} · {product.category}</p>
-                        <a href={product.affiliateUrl || product.destinationUrl} target="_blank" rel={product.affiliateUrl ? 'nofollow sponsored noreferrer' : 'nofollow noreferrer'}>
-                          View product →
-                        </a>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
+              <p className="look-note">Editorial inspiration only. No product shopping links are provided.</p>
             </div>
           </article>
         ))}

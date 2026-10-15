@@ -488,36 +488,29 @@ function SpacePage() {
 }
 
 function CuratedFindsPage() {
-  const selections: { id: string; image: string; mood: string; title: string }[] = [];
-
+  const selections = [
+    { image: '/Jade%20Kitchen.PNG', title: 'Stone & Shadow', mood: 'MATERIAL / SHADOW', copy: 'Architectural lighting and dark surfaces create depth in the Jade Kitchen.' },
+    { image: '/38-tonal-blue-velvet-sectional.jpg', title: 'Velvet After Dark', mood: 'TEXTURE / DEPTH', copy: 'Tonal upholstery brings softness to an architectural blue interior.' },
+    { image: '/50-teal-velvet-living-v3.jpg', title: 'The Black Silhouette', mood: 'LIGHT / ARCHITECTURE', copy: 'A study of contrast, placement and controlled illumination.' },
+    { image: '/Emerald%20Noir%20bathroom.PNG', title: 'A Softer Glow', mood: 'LIGHT / SOFT CONTRAST', copy: 'Slim vertical lighting and concealed illumination shape this dark bathroom.' },
+  ];
   return (
     <>
-      <SEO title="Curated Finds | Afterdark Dwellings" description="A small, intentional edit of lighting, mirrors, and textiles for darker interiors." />
-      <PageHero kicker="THE AFTERDARK EDIT" title="CURATED FINDS" copy="Fewer objects. Better choices. Pieces selected for their material, silhouette, and place in a dark interior." />
+      <SEO title="Curated Finds | Afterdark Dwellings" description="An editorial selection of atmospheric rooms, materials and lighting details." />
+      <PageHero kicker="THE AFTERDARK EDIT" title="CURATED FINDS" copy="An intentional edit of material, silhouette, light and shadow." />
       <section className="content-section curated-editorial">
-        <div className="curated-editorial-intro">
-          <span className="eyebrow">AN EDIT, NOT A CATALOG</span>
-          <p>Four considered finds, each paired with a room mood from our own collections. Product links are displayed only after the exact item and an authorized affiliate destination have been confirmed.</p>
-        </div>
+        <div className="curated-editorial-intro"><span className="eyebrow">AN EDIT, NOT A CATALOG</span><p>Explore the details behind each room. Shopping links are intentionally not provided.</p></div>
         <div className="curated-editorial-grid">
-          {selections.map((selection, index) => {
-            const product = getProduct(selection.id);
-            if (!product) return null;
-            return (
-              <article className="curated-editorial-card" key={selection.id}>
-                <img src={selection.image} alt={`${selection.title} — Afterdark Dwellings room inspiration, not a product photograph`} loading="lazy" />
-                <div className="curated-editorial-copy">
-                  <span className="eyebrow">{String(index + 1).padStart(2, '0')} / {selection.mood}</span>
-                  <h2>{selection.title}</h2>
-                  <h3>{product.name}</h3>
-                  <p>{product.editorialNote}</p>
-                  <a href={product.destinationUrl} target="_blank" rel="nofollow noreferrer">View piece at {product.merchant} ↗</a>
-                </div>
-              </article>
-            );
-          })}
+          {selections.map((selection, index) => (
+            <article className="curated-editorial-card" key={selection.title}>
+              <img src={selection.image} alt={`${selection.title} — Afterdark Dwellings room inspiration`} loading="lazy" />
+              <div className="curated-editorial-copy">
+                <span className="eyebrow">{String(index + 1).padStart(2, '0')} / {selection.mood}</span>
+                <h2>{selection.title}</h2><p>{selection.copy}</p>
+              </div>
+            </article>
+          ))}
         </div>
-        <p className="disclosure wide">Independent editorial selections. Images illustrate the mood, not the exact retail products. Links go to retailer product pages; prices, stock, and shipping may change. No affiliate tracking is attached to these links.</p>
       </section>
     </>
   );
@@ -662,7 +655,7 @@ function NoirElegancePage() {
             <figcaption>Noir Elegance — The Raven's Reflection</figcaption>
           </figure>
         </div>
-        <p className="noir-collection-note">These scenes are editorial inspiration. No shopping links are displayed without confirmed exact-product Amazon or HOROW affiliate destinations.</p>
+        <p className="noir-collection-note">These scenes are editorial inspiration. Shopping links are not currently displayed.</p>
       </section>
     </>
   );
@@ -696,7 +689,7 @@ function ShopTheLookPage() {
   return (
     <>
       <SEO title="Shop the Look | Afterdark Dwellings" description="Explore dark-interior looks. Exact-match affiliate products are added only after verification." />
-      <PageHero kicker="ROOM / OBJECT / SOURCE" title="SHOP THE LOOK." copy="Start with a room composition, then move directly to the real objects that can help build it." />
+      <PageHero kicker="ROOM / OBJECT / SOURCE" title="SHOP THE LOOK." copy="Explore the composition, materials and details behind each room." />
       <section className="shop-look-note">
         <span>HOW THIS WORKS</span>
         <p>The room image sets the direction. Shopping links are shown only when the pictured product and authorized Amazon or HOROW affiliate destination have been confirmed.</p>
@@ -827,8 +820,8 @@ function TermsPage() {
 function FAQPage() {
   const faqs = [
     ['What is Afterdark Dwellings?', 'An independent interior and home editorial focused on dark architectural spaces, considered objects and practical upgrades.'],
-    ['Do you use affiliate links?', 'Some links may become affiliate links. When tracked affiliate links are used, the relationship is disclosed.'],
-    ['Do you sell the products shown?', 'Not unless a page explicitly says otherwise. Curated Finds normally points to third-party merchants that handle checkout, fulfillment, returns and warranties.'],
+    ['Do you use affiliate links?', 'There are currently no shopping or affiliate links on the website. Any future affiliate links will be disclosed.'],
+    ['Do you sell the products shown?', 'Not unless a page explicitly says otherwise. The site currently provides design inspiration without shopping links.'],
     ['Are the products real?', 'Anything displayed as a purchasable recommendation should correspond to a real product and real merchant destination.'],
     ['How do I get in touch?', site.email],
   ];
@@ -907,7 +900,7 @@ function TextPage({ kicker, title, children }: { kicker: string; title: string; 
 function ComingSoon({ children }: { children: ReactNode }) {
   return (
     <div className="coming-soon">
-      <span>VERIFIED RECOMMENDATIONS COMING SOON</span>
+      <span>PRODUCT SOURCING IN PROGRESS</span>
       <p>{children}</p>
     </div>
   );

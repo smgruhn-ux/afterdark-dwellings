@@ -27,7 +27,7 @@ export const images = {
 export type Product = {
   id: string;
   name: string;
-  merchant: 'Walmart' | "Lowe's" | 'Bed Bath & Beyond' | 'Etsy';
+  merchant: 'Amazon' | 'HOROW';
   category: string;
   editorialNote: string;
   destinationUrl: string;
@@ -36,99 +36,7 @@ export type Product = {
   relatedSpaces: string[];
 };
 
-export const products: Product[] = [
-  {
-    id: 'curated-wayton-sconce',
-    name: 'allen + roth Wayton Matte Black Wall Sconce',
-    merchant: "Lowe's",
-    category: 'Lighting',
-    editorialNote: 'A clean-lined black wall light for shadow-rich hallways, bedrooms, or a reading corner.',
-    destinationUrl: 'https://www.lowes.com/pd/allen-roth-Wayton-9-in-1-Light-Matte-Black-Modern-Contemporary-LED-Wall-Sconce/5013066741',
-    verified: true,
-    relatedSpaces: ['living-rooms', 'bedrooms'],
-  },
-  {
-    id: 'curated-onyx-sconce',
-    name: 'ZHLLMQ Natural Onyx Stone Wall Sconce',
-    merchant: "Lowe's",
-    category: 'Lighting',
-    editorialNote: 'Translucent natural stone and a restrained black frame bring material depth to a dark wall.',
-    destinationUrl: 'https://www.lowes.com/pd/ZHLLMQ-Short-Modern-Vertical-Wall-Sconce-with-Natural-Onyx-Stone-Shade/5022845024',
-    verified: true,
-    relatedSpaces: ['living-rooms', 'bedrooms'],
-  },
-  {
-    id: 'curated-black-velvet-drapes',
-    name: 'NICETOWN Black Velvet Room-Darkening Curtains',
-    merchant: "Lowe's",
-    category: 'Textiles',
-    editorialNote: 'Black velvet panels add softness, weight, and light control to tonal bedrooms and living spaces. Check the panel size before ordering.',
-    destinationUrl: 'https://www.lowes.com/pd/NICETOWN-Black-Luxury-Velvet-Curtains-Room-Darkening-Heavy-Duty-Window-Treatments-For-Living-Room-Bedroom-W52-L108-Inch-2-Panels/5022465996',
-    verified: true,
-    relatedSpaces: ['bedrooms', 'living-rooms'],
-  },
-  {
-    id: 'curated-evensong-sconce',
-    name: 'Designers Fountain Evensong Matte Black Wall Sconce',
-    merchant: "Lowe's",
-    category: 'Lighting',
-    editorialNote: 'A sculptural metal-and-opal-glass fixture for a softer pool of light against dark walls.',
-    destinationUrl: 'https://www.lowes.com/pd/Designers-Fountain-Evensong-8-in-1-Light-Matte-Black-Indoor-Wall-Sconce-Light-for-Bathrooms/5016102149',
-    verified: true,
-    relatedSpaces: ['bathrooms', 'bedrooms'],
-  },
-  {
-    id: 'bedbath-beatrix-black-velvet-stool',
-    name: 'Beatrix Pleated Velvet Counter Stool — Black',
-    merchant: 'Bed Bath & Beyond',
-    category: 'Furniture',
-    editorialNote: 'A velvet counter-height seating option for the Jade Kitchen palette. Compare the stool silhouette and measurements against your own island before ordering.',
-    destinationUrl: 'https://www.bedbathandbeyond.com/Home-Garden/Beatrix-Pleated-Light-Grey-Velvet-Counter-Stool-N-A/29139867/product.html?option=60068455',
-    verified: true,
-    relatedSpaces: ['kitchens'],
-  },
-  {
-    id: 'walmart-wall-sconce',
-    name: 'Better Homes & Gardens Matte Black 1-Light Indoor Wall Sconce',
-    merchant: 'Walmart',
-    category: 'Lighting',
-    editorialNote: 'A compact matte-black sconce that works in bedside zones, entries, hallways, or anywhere a dark room needs a smaller pool of light.',
-    destinationUrl: 'https://www.walmart.com/ip/998572418',
-    verified: true,
-    relatedSpaces: ['bedrooms', 'entryways', 'living-rooms'],
-  },
-  {
-    id: 'lowes-up-down-sconce',
-    name: 'IUEST Dimmable Black Up/Down LED Wall Sconce',
-    merchant: "Lowe's",
-    category: 'Lighting',
-    editorialNote: 'An up/down wall wash is useful when a dark wall needs shape and depth without flooding the entire room with direct light.',
-    destinationUrl: 'https://www.lowes.com/pd/IUEST-Indoor-Wall-Sconce-Dimmable-10W-Modern-LED-Wall-Lamp-Black-Up-Down-Wall-Mount-Mini-Metal-for-Living-Room-Bedroom-Hallway-Decor-Warm-White/105789421',
-    verified: true,
-    relatedSpaces: ['entryways', 'bathrooms', 'living-rooms'],
-  },
-  {
-    id: 'lowes-pharmacy-lamp',
-    name: 'Brightech Linden Black LED Pharmacy Floor Lamp',
-    merchant: "Lowe's",
-    category: 'Lighting',
-    editorialNote: 'Focused adjustable light is useful beside a reading chair or desk because it lets the surrounding room stay darker.',
-    destinationUrl: 'https://www.lowes.com/pd/Brightech-65-in-Linden-Black-LED-Pharmacy-Floor-Lamp-with-Adjustable-Shade/7626400',
-    verified: true,
-    relatedSpaces: ['living-rooms', 'home-offices', 'bedrooms'],
-  },
-  {
-    id: 'lowes-under-cabinet',
-    name: 'BLACK+DECKER 18-in Warm White LED Under-Cabinet Light Bar',
-    merchant: "Lowe's",
-    category: 'Lighting',
-    editorialNote: 'Warm under-cabinet lighting keeps work surfaces readable while preserving contrast through the rest of a black kitchen.',
-    destinationUrl: 'https://www.lowes.com/pd/BLACK-DECKER-18-in-Plug-in-Light-Bar/1000332161',
-    verified: true,
-    relatedSpaces: ['kitchens'],
-  },
-
-];
+export const products: Product[] = [];
 
 export const getProduct = (id?: string) => products.find((product) => product.id === id);
 

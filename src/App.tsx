@@ -283,7 +283,7 @@ function HomePage() {
       </section>
       <section className="shop-promise">
         <div><span className="eyebrow">03 / THE REAL-LIFE EDIT</span><h2>LOVE THE ROOM?<br /><i>MAKE IT YOURS.</i></h2></div>
-        <div><p>Beautiful inspiration should lead somewhere useful. Explore room guides, discover comparable décor and materials, and shop existing retailer listings—not imaginary products.</p><Link className="button light" to="/shop-the-look">Shop the look ↗</Link><Link className="text-link" to="/curated-finds">See curated finds →</Link></div>
+        <div><p>Explore room guides and design details. Shopping links appear only for exact, confirmed products from authorized affiliate partners.</p><Link className="button light" to="/shop-the-look">Shop the look ↗</Link><Link className="text-link" to="/curated-finds">See curated finds →</Link></div>
       </section>
       <section className="content-section latest-section">
         <SectionTitle index="04 / THE JOURNAL" title="DESIGN AFTER DARK." copy="Guides for creating strong atmosphere with real choices in texture, light, scale and finish." />
@@ -363,7 +363,7 @@ function GuideArticlePage() {
           </aside>
 
           <p className="disclosure">
-            Editorial content by Afterdark Dwellings. Some retailer links may later become affiliate links. When affiliate tracking is added, it will be disclosed and may earn Afterdark Dwellings a commission at no additional cost to the purchaser.
+            Editorial content by Afterdark Dwellings. Only confirmed Amazon or HOROW affiliate links will be displayed when an exact product match is available.
           </p>
         </div>
       </article>
@@ -445,13 +445,13 @@ function SpacePage() {
       </section>
 
       <section className="content-section">
-        <SectionTitle index="02 / FINDS" title="USEFUL OBJECTS" copy="Verified retailer destinations that fit the room's actual design needs." />
+        <SectionTitle index="02 / FINDS" title="USEFUL OBJECTS" copy="Exact product links appear only when an authorized Amazon or HOROW affiliate destination is confirmed." />
         {roomProducts.length > 0 ? (
           <div className="product-grid">
             {roomProducts.map((product) => <ProductLink product={product} key={product.id} />)}
           </div>
         ) : (
-          <ComingSoon>Verified recommendations for this room are being sourced now.</ComingSoon>
+          <ComingSoon>Product sourcing is in progress. No unverified shopping links are displayed.</ComingSoon>
         )}
       </section>
 
@@ -488,12 +488,7 @@ function SpacePage() {
 }
 
 function CuratedFindsPage() {
-  const selections = [
-    { id: 'curated-onyx-sconce', image: '/Jade%20Kitchen.PNG', mood: 'MATERIAL / SHADOW', title: 'Stone & Shadow' },
-    { id: 'curated-black-velvet-drapes', image: '/38-tonal-blue-velvet-sectional.jpg', mood: 'TEXTURE / DEPTH', title: 'Velvet After Dark' },
-    { id: 'curated-wayton-sconce', image: '/50-teal-velvet-living-v3.jpg', mood: 'LIGHT / ARCHITECTURE', title: 'The Black Silhouette' },
-    { id: 'curated-evensong-sconce', image: '/Emerald%20Noir%20bathroom.PNG', mood: 'LIGHT / SOFT CONTRAST', title: 'A Softer Glow' },
-  ];
+  const selections: { id: string; image: string; mood: string; title: string }[] = [];
 
   return (
     <>
@@ -502,7 +497,7 @@ function CuratedFindsPage() {
       <section className="content-section curated-editorial">
         <div className="curated-editorial-intro">
           <span className="eyebrow">AN EDIT, NOT A CATALOG</span>
-          <p>Four considered finds, each paired with a room mood from our own collections. The photographs are interior inspiration, not pictures of the products themselves.</p>
+          <p>Four considered finds, each paired with a room mood from our own collections. Product links are displayed only after the exact item and an authorized affiliate destination have been confirmed.</p>
         </div>
         <div className="curated-editorial-grid">
           {selections.map((selection, index) => {
@@ -613,10 +608,7 @@ function NoirElegancePage() {
       image: '/57-noir-bedroom-wings-v2.jpg',
       alt: 'Noir Elegance bedroom composition with ornate, wing-inspired details.',
       description: 'Build the atmosphere with a dark foundation, tactile bedding, and precisely placed low lighting. Let one sculptural feature take the lead.',
-      links: [
-        { text: 'Silver and pewter damask bedding · Bed Bath & Beyond', href: 'https://www.bedbathandbeyond.com/Bedding-Bath/Five-Queens-Court-Lafayette-Comforter-Set/31919466/product.html?option=58868684' },
-        { text: 'Black and ivory traditional floral rug · Wayfair', href: 'https://www.wayfair.com/rugs/pdp/astoria-grand-weisgerber-oriental-blackivory-area-rug-astd4602.html?piid=1' },
-      ],
+      links: [],
     },
     {
       title: 'The Raven Console',
@@ -624,10 +616,7 @@ function NoirElegancePage() {
       image: '/58-noir-console-raven.jpg',
       alt: 'Ornate Noir Elegance console scene with raven-inspired detailing.',
       description: 'Treat the console like a still life: a strong focal object, restrained accessories, and enough empty surface to frame the silhouette.',
-      links: [
-        { text: 'Antique-style black carved floral cabinet · Wayfair', href: 'https://www.wayfair.com/furniture/pdp/astoria-grand-vintage-hollow-carved-accent-cabinet-2-door-display-storage-sideboard-with-symmetrical-floral-design-adjustable-shelf-and-solid-wood-legs-for-living-room-entryway-w119246125.html?piid=125431776' },
-        { text: 'Carved floral furniture detailing for restoration · Etsy', href: 'https://www.etsy.com/listing/1736086397/3d-wood-moulding-onlay-floral-carved' },
-      ],
+      links: [],
     },
     {
       title: 'The Filigree Corner',
@@ -635,10 +624,7 @@ function NoirElegancePage() {
       image: '/61-noir-chaise-corner-filigree.jpg',
       alt: 'Moody Noir Elegance chaise lounge corner with decorative filigree.',
       description: 'Anchor a quiet corner with black velvet seating. Keep surrounding objects secondary so the chair and architectural detail remain the focus.',
-      links: [
-        { text: 'Carved Victorian chaise with custom upholstery and finish · Laurel Crown', href: 'https://www.laurelcrown.com/victorian-single-end-show-frame-sofa' },
-        { text: 'Black ruffled lace drape · Etsy', href: 'https://www.etsy.com/listing/1287925471/black-ruffle-lace-throw-elegant' },
-      ],
+      links: [],
     },
   ];
 
@@ -676,7 +662,7 @@ function NoirElegancePage() {
             <figcaption>Noir Elegance — The Raven's Reflection</figcaption>
           </figure>
         </div>
-        <p className="noir-collection-note">These are comparable pieces for inspiration, not claims that the photographed spaces contain the exact products. Retailer stock and pricing may change.</p>
+        <p className="noir-collection-note">These scenes are editorial inspiration. No shopping links are displayed without confirmed exact-product Amazon or HOROW affiliate destinations.</p>
       </section>
     </>
   );
@@ -709,11 +695,11 @@ function ShopTheLookPage() {
 
   return (
     <>
-      <SEO title="Shop the Look | Afterdark Dwellings" description="Shop editorial dark-interior looks with verified retailer links selected by Afterdark Dwellings." />
+      <SEO title="Shop the Look | Afterdark Dwellings" description="Explore dark-interior looks. Exact-match affiliate products are added only after verification." />
       <PageHero kicker="ROOM / OBJECT / SOURCE" title="SHOP THE LOOK." copy="Start with a room composition, then move directly to the real objects that can help build it." />
       <section className="shop-look-note">
         <span>HOW THIS WORKS</span>
-        <p>The room image sets the direction. Only products already verified against real retailer destinations are linked below it. A visual match is editorial inspiration, not a claim that the exact photographed room contains those products.</p>
+        <p>The room image sets the direction. Shopping links are shown only when the pictured product and authorized Amazon or HOROW affiliate destination have been confirmed.</p>
       </section>
       <section className="content-section looks">
         {looks.map((look) => (
@@ -794,7 +780,7 @@ function AffiliateDisclosurePage() {
       <TextPage kicker="LEGAL / TRANSPARENCY" title="AFFILIATE DISCLOSURE">
         <p>Afterdark Dwellings may participate in affiliate programs. When a tracked affiliate link is used and a qualifying purchase is made, Afterdark Dwellings may receive a commission at no additional cost to the purchaser.</p>
         <h2>Current links</h2>
-        <p>Not every retailer link is an affiliate link. Normal retailer links may be published before an affiliate relationship exists. Tracked links should be disclosed when added.</p>
+        <p>Not every retailer link is an affiliate link. Only verified Amazon and HOROW affiliate product links are permitted. Products without confirmed matching affiliate links are not linked.</p>
         <h2>Editorial independence</h2>
         <p>Affiliate eligibility does not guarantee placement. Products must still fit the editorial topic and correspond to a real merchant destination.</p>
       </TextPage>
